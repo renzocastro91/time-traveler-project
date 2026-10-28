@@ -115,6 +115,8 @@ namespace TimeTraveler
             }
         }
 
+        public void Close() { if (canvas.gameObject.activeSelf) Finish(false); }
+
         private void Finish(bool solved)
         {
             canvas.gameObject.SetActive(false);

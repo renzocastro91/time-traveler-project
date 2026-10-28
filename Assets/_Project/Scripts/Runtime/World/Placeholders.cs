@@ -20,8 +20,11 @@ namespace TimeTraveler
             if (Materials.TryGetValue(color, out m)) return m;
             bool srp = GraphicsSettings.currentRenderPipeline != null;
             var shader = Shader.Find(srp ? "Universal Render Pipeline/Lit" : "Standard");
+            bool standard = shader != null && !srp;
+            // Respaldo por si la compilación no incluyó el shader (ver Time Traveler › Preparar proyecto).
+            if (shader == null) shader = Shader.Find("Legacy Shaders/Diffuse") ?? Shader.Find("Sprites/Default");
             m = new Material(shader) { color = color };
-            if (color.a < 1f && !srp)
+            if (color.a < 1f && standard)
             {
                 // Modo transparente del shader Standard.
                 m.SetFloat("_Mode", 3);

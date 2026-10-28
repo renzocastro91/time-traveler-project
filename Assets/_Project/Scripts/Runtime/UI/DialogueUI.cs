@@ -13,6 +13,8 @@ namespace TimeTraveler
     public sealed class DialogueUI : MonoBehaviour
     {
         public float CharactersPerSecond = 55f;
+        /// <summary>Pruebas automáticas: avanza solo y elige siempre la primera opción visible.</summary>
+        public bool AutoPlay;
 
         private Canvas canvas;
         private Text speaker, body;
@@ -106,6 +108,14 @@ namespace TimeTraveler
         private void Update()
         {
             if (runner == null || !canvas.gameObject.activeSelf || Time.frameCount == lastChangeFrame) return;
+            if (AutoPlay)
+            {
+                if (!lineComplete) CompleteLine(GameManager.T(runner.Current.TextKey));
+                if (runner.VisibleChoices().Count > 0) runner.Choose(0);
+                else runner.Advance();
+                ShowCurrent();
+                return;
+            }
             if (!GameInput.Instance.Confirm.WasPressedThisFrame()) return;
 
             if (!lineComplete)

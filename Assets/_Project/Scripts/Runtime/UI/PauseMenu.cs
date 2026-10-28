@@ -491,9 +491,7 @@ namespace TimeTraveler
                 foreach (var record in State.Story.Cierres)
                 {
                     var def = Db.Cierres[record.Id];
-                    string detail = T("cierre.before") + ": " + T(def.BeforeKey) + "
-" + T("cierre.now") + ": " + T(def.NowKey(record.Value)) + "
-" + T(def.PersonKey(record.Value));
+                    string detail = T("cierre.before") + ": " + T(def.BeforeKey) + "\n" + T("cierre.now") + ": " + T(def.NowKey(record.Value)) + "\n" + T(def.PersonKey(record.Value));
                     Item(T(def.CauseKey), null, detail);
                 }
             }

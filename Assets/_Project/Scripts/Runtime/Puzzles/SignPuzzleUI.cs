@@ -121,6 +121,8 @@ namespace TimeTraveler
             if (GameInput.Instance.Cancel.WasPressedThisFrame()) Finish(false);
         }
 
+        public void Close() { if (canvas.gameObject.activeSelf) Finish(false); }
+
         private void Finish(bool solved)
         {
             StopAllCoroutines();

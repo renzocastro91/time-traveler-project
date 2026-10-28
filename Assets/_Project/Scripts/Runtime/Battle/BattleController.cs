@@ -45,6 +45,8 @@ namespace TimeTraveler
         private bool finishing;
 
         public bool InBattle { get { return engine != null; } }
+        /// <summary>Pruebas automáticas: usa la orden especial si existe, si no ataca; cierra los resultados solo.</summary>
+        public bool AutoPlay;
 
         private void Awake()
         {
@@ -119,6 +121,8 @@ namespace TimeTraveler
 
         private void Cleanup(BattleOutcome outcome)
         {
+            // Detiene animaciones en curso (caídas, números flotantes) antes de destruir los modelos.
+            StopAllCoroutines();
             foreach (var go in spawned) Destroy(go);
             spawned.Clear();
             foreach (var pair in views)
@@ -165,6 +169,13 @@ namespace TimeTraveler
 
             if (menuActor != null && !engine.ReadyPlayers.Contains(menuActor)) CloseMenu();
             if (menuActor == null && !animating && engine.ReadyPlayers.Count > 0) OpenCommands(engine.ReadyPlayers[0]);
+            if (AutoPlay && menuActor != null && !animating)
+            {
+                var actor = menuActor;
+                var rule = engine.Rule != null ? engine.Rule.GetCommands(engine, actor).FirstOrDefault() : null;
+                var target = engine.Opponents(actor).FirstOrDefault();
+                Submit(rule != null ? BattleAction.Rule(actor, rule.Id, target) : BattleAction.Attack(actor, target));
+            }
 
             engine.MenuOpen = menuActor != null;
             engine.Paused = animating;
@@ -618,12 +629,13 @@ namespace TimeTraveler
         {
             for (float time = 0f; time < 0.4f; time += Time.deltaTime)
             {
+                if (t == null) yield break;
                 float k = time / 0.4f;
                 if (vanish) t.localScale = Vector3.one * (1f - k);
                 else t.localScale = new Vector3(1f, Mathf.Lerp(1f, 0.35f, k), 1f);
                 yield return null;
             }
-            if (vanish) t.gameObject.SetActive(false);
+            if (vanish && t != null) t.gameObject.SetActive(false);
         }
 
         private static IEnumerator DelayThen(float seconds, Action action)
@@ -654,6 +666,7 @@ namespace TimeTraveler
                 UIKit.Label(list, GameManager.T("battle.affinity", GameManager.T(gm.Db.Species(pet.SpeciesId).NameKey), summary.PetAffinityGained), 26, TextAnchor.MiddleLeft, UIKit.MpColor);
             var button = UIKit.Button(list, GameManager.T("battle.continue"), onClose);
             UIKit.Focus(button);
+            if (AutoPlay) onClose();
         }
     }
 }

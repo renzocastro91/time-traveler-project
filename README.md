@@ -9,15 +9,27 @@ completo y decisiones narrativas persistentes. Basado en el guion original *Las 
 
 ## Abrir el proyecto
 
-1. Instala **Unity Hub** y un editor **Unity 6 LTS** (6000.x) con el módulo *Windows Build Support*.
-2. Unity Hub → **Add › Add project from disk** → elige esta carpeta.
-   La primera apertura tarda: Unity descarga los paquetes y genera `Library/` y `ProjectSettings/`.
-3. Si Unity pregunta por el **Input System** y ofrece reiniciar, acepta. Si no pregunta, ve a
-   *Edit › Project Settings › Player › Other Settings › Active Input Handling* y elige
-   **Input System Package (New)** o **Both**.
-4. Abre cualquier escena (la vacía que crea Unity sirve) y pulsa **Play**: el juego se construye
-   solo (cámara, luz, mapa de prueba, interfaz).
-5. Haz un commit con los archivos `.meta` y `ProjectSettings/` que Unity generó.
+1. Instala **Unity Hub** e inicia sesión con una cuenta de Unity (licencia Personal gratuita).
+2. Instala el editor **Unity 6.3 LTS — 6000.3.27f1** (la versión del proyecto).
+3. Unity Hub → **Add › Add project from disk** → elige esta carpeta.
+4. Abre la escena `Assets/Scenes/Main.unity` y pulsa **Play**: el juego se construye solo.
+
+El Input System ya está activado en la configuración del proyecto (teclado y mando).
+
+### Menú «Time Traveler» del editor
+
+- **Validar datos y textos**: revisa referencias rotas y textos faltantes.
+- **Preparar proyecto**: crea la escena principal e incluye los shaders necesarios.
+- **Compilar para Windows**: genera `Builds/Windows/LasHorasQueFaltan.exe`.
+
+### Prueba de humo (el juego se juega solo)
+
+```powershell
+Builds\Windows\LasHorasQueFaltan.exe -batchmode -nographics -smoketest -logFile smoke.log
+```
+
+Recorre todos los mapas, pelea combates (incluido un jefe), abre los menús, un Cierre y los
+puzzles, guarda y carga. Termina con código 0 si no hubo errores (buscar `[SMOKE]` en el log).
 
 ## Controles
 
