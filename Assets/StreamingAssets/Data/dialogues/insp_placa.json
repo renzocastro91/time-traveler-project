@@ -1,0 +1,10 @@
+{
+  "id": "insp_placa",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.insp_placa.n1"
+    }
+  ]
+}

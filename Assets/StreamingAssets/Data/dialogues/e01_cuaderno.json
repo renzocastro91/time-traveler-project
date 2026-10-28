@@ -1,0 +1,57 @@
+{
+  "id": "e01_cuaderno",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e01_cuaderno.n1",
+      "choices": [
+        {
+          "textKey": "dlg.e01_cuaderno.n1.c0",
+          "next": "n2a",
+          "effects": [
+            {
+              "flag": "CONFIANZA_VA",
+              "op": "Add",
+              "value": 1
+            },
+            {
+              "flag": "CONSENTIMIENTO",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e01_cuaderno.n1.c1",
+          "next": "n2b",
+          "effects": [
+            {
+              "flag": "CONFIANZA_VA",
+              "op": "Add",
+              "value": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n2a",
+      "textKey": "dlg.e01_cuaderno.n2a",
+      "next": "n3"
+    },
+    {
+      "id": "n2b",
+      "textKey": "dlg.e01_cuaderno.n2b",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e01_cuaderno.n3",
+      "actions": [
+        "give:cinta_2026:1",
+        "scene:E02"
+      ]
+    }
+  ]
+}

@@ -23,7 +23,7 @@ namespace TimeTraveler
             subheading.rectTransform.anchorMin = new Vector2(0, 0.55f);
             subheading.rectTransform.anchorMax = new Vector2(1, 0.62f);
             subheading.rectTransform.offsetMin = subheading.rectTransform.offsetMax = Vector2.zero;
-            var window = UIKit.Window(canvas.transform, "Menu", new Vector2(0.38f, 0.18f), new Vector2(0.62f, 0.48f));
+            var window = UIKit.Window(canvas.transform, "Menu", new Vector2(0.38f, 0.14f), new Vector2(0.62f, 0.5f));
             list = UIKit.VerticalList(window, false, 8f);
             canvas.gameObject.SetActive(false);
         }
@@ -39,6 +39,7 @@ namespace TimeTraveler
             for (int slot = 1; slot <= SaveService.SlotCount; slot++)
                 if (System.IO.File.Exists(SaveService.SlotPath(gm.SaveDirectory, slot))) hasSave = true;
             var cont = UIKit.Button(list, GameManager.T("title.continue"), () => gm.Pause.OpenLoadScreen(fromTitle: true), null, hasSave);
+            UIKit.Button(list, GameManager.T("title.test"), () => { Hide(); gm.NewTestGame(); });
             UIKit.Button(list, GameManager.T("title.quit"), Application.Quit);
             canvas.gameObject.SetActive(true);
             UIKit.Focus(hasSave ? cont : newGame);

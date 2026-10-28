@@ -1,0 +1,24 @@
+{
+  "id": "insp_periodicos",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_periodicos.r",
+      "condition": "E04_PERIODICOS",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_periodicos.p",
+      "effects": [
+        {
+          "flag": "E04_PERIODICOS",
+          "op": "Set",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

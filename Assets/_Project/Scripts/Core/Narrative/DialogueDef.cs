@@ -29,15 +29,13 @@ namespace TimeTraveler.Core
         /// <summary>Clave del nombre del hablante (p. ej. "char.violeta.name"); vacío = narrador.</summary>
         public string SpeakerKey;
         public string TextKey;
-        /// <summary>Si la condición no se cumple, el nodo se salta y se pasa a Next.</summary>
+        /// <summary>Si la condición no se cumple, el nodo se salta y se pasa a Else (o a Next si no hay Else).</summary>
         public string Condition;
         public string Next;
+        public string Else;
         public List<DialogueChoice> Choices = new List<DialogueChoice>();
         public List<FlagEffect> Effects = new List<FlagEffect>();
-        /// <summary>
-        /// Acciones para el motor: "battle:enc_id", "recruit:lia", "give:item_id:2", "scene:E02",
-        /// "money:100". Las ejecuta la capa Unity.
-        /// </summary>
+        /// <summary>Acciones al entrar en el nodo (ver StoryActions para la lista completa).</summary>
         public List<string> Actions = new List<string>();
     }
 

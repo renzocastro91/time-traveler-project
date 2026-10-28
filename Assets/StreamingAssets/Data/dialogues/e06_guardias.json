@@ -1,0 +1,86 @@
+{
+  "id": "e06_guardias",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e06_guardias.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e06_guardias.n2",
+      "speakerKey": "npc.guardia_lira.name",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e06_guardias.n3",
+      "choices": [
+        {
+          "textKey": "dlg.e06_guardias.n3.c0",
+          "next": "a",
+          "effects": [
+            {
+              "flag": "E06_ENTRADA",
+              "op": "Set",
+              "value": 1
+            }
+          ],
+          "condition": "item.telefono_de_lia"
+        },
+        {
+          "textKey": "dlg.e06_guardias.n3.c1",
+          "next": "b",
+          "effects": [
+            {
+              "flag": "E06_ENTRADA",
+              "op": "Set",
+              "value": 2
+            }
+          ],
+          "condition": "item.telefono_de_lia"
+        },
+        {
+          "textKey": "dlg.e06_guardias.n3.c2",
+          "next": "c",
+          "effects": [
+            {
+              "flag": "E06_ENTRADA",
+              "op": "Set",
+              "value": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a",
+      "textKey": "dlg.e06_guardias.a",
+      "next": "fin",
+      "actions": [
+        "take:telefono_de_lia:1"
+      ]
+    },
+    {
+      "id": "b",
+      "textKey": "dlg.e06_guardias.b",
+      "next": "fin",
+      "actions": [
+        "take:telefono_de_lia:1"
+      ]
+    },
+    {
+      "id": "c",
+      "textKey": "dlg.e06_guardias.c",
+      "next": "fin"
+    },
+    {
+      "id": "fin",
+      "textKey": "dlg.e06_guardias.fin",
+      "actions": [
+        "cierre:cierre_e06"
+      ]
+    }
+  ]
+}

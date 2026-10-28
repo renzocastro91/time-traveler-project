@@ -1,0 +1,320 @@
+{
+  "id": "instituto_2000",
+  "era": "2000",
+  "size": [
+    46,
+    34
+  ],
+  "floorColor": "#8a7a62",
+  "skyColor": "#2a2a3a",
+  "spawns": {
+    "default": [
+      -12,
+      -6,
+      0
+    ],
+    "desde_estacion": [
+      18,
+      -12,
+      180
+    ],
+    "nudo": [
+      -16,
+      -11,
+      0
+    ]
+  },
+  "blocks": [
+    {
+      "pos": [
+        0,
+        1.6,
+        17.0
+      ],
+      "size": [
+        46,
+        3.2,
+        1
+      ],
+      "color": "#b8a888"
+    },
+    {
+      "pos": [
+        0,
+        1.6,
+        -17.0
+      ],
+      "size": [
+        46,
+        3.2,
+        1
+      ],
+      "color": "#b8a888"
+    },
+    {
+      "pos": [
+        23.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        34
+      ],
+      "color": "#b8a888"
+    },
+    {
+      "pos": [
+        -23.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        34
+      ],
+      "color": "#b8a888"
+    },
+    {
+      "pos": [
+        2,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        20
+      ],
+      "color": "#a89878"
+    },
+    {
+      "pos": [
+        -12,
+        0.5,
+        9
+      ],
+      "size": [
+        6,
+        1,
+        1.2
+      ],
+      "color": "#6b5a45"
+    },
+    {
+      "pos": [
+        -12,
+        0.5,
+        3
+      ],
+      "size": [
+        6,
+        1,
+        1.2
+      ],
+      "color": "#6b5a45"
+    },
+    {
+      "pos": [
+        -20,
+        1.2,
+        6
+      ],
+      "size": [
+        2,
+        2.4,
+        10
+      ],
+      "color": "#5a4a3a"
+    },
+    {
+      "pos": [
+        14,
+        0.03,
+        4
+      ],
+      "size": [
+        12,
+        8,
+        0.05
+      ],
+      "color": "#5f6670"
+    },
+    {
+      "pos": [
+        14,
+        0.05,
+        4
+      ],
+      "size": [
+        0.2,
+        8,
+        0.06
+      ],
+      "color": "#d8d8d8"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "album",
+      "pos": [
+        -18,
+        0
+      ],
+      "dialogue": "insp_album",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "lista",
+      "pos": [
+        -8,
+        12
+      ],
+      "dialogue": "insp_lista",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "casete",
+      "pos": [
+        -16,
+        12
+      ],
+      "dialogue": "insp_casete",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "maqueta",
+      "pos": [
+        -4,
+        4
+      ],
+      "dialogue": "insp_maqueta",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "mural",
+      "pos": [
+        -3,
+        15.3
+      ],
+      "dialogue": "insp_mural",
+      "model": "sign",
+      "color": "#d0c8b0",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "magnetofono",
+      "pos": [
+        -8,
+        -2
+      ],
+      "dialogue": "e02_magnetofono",
+      "model": "magnetofono",
+      "color": "#555555",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    }
+  ],
+  "chests": [],
+  "enemies": [],
+  "wild": [
+    {
+      "id": "w_tropel_1",
+      "pos": [
+        12,
+        8
+      ],
+      "species": "tropel",
+      "level": 3
+    },
+    {
+      "id": "w_tropel_2",
+      "pos": [
+        16,
+        -2
+      ],
+      "species": "tropel",
+      "level": 4
+    }
+  ],
+  "exits": [
+    {
+      "pos": [
+        20,
+        -15
+      ],
+      "size": [
+        3,
+        3
+      ],
+      "toMap": "estacion_2000",
+      "toSpawn": "default",
+      "condition": "scene.E02",
+      "lockedTextKey": "exit.locked.station"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "t_e01_intro",
+      "pos": [
+        -12,
+        -6
+      ],
+      "size": [
+        6,
+        6
+      ],
+      "dialogue": "e01_intro",
+      "once": true,
+      "condition": "current.E01"
+    },
+    {
+      "id": "t_e02_cinta",
+      "pos": [
+        -8,
+        -2
+      ],
+      "size": [
+        5,
+        5
+      ],
+      "dialogue": "e02_cinta",
+      "once": true,
+      "condition": "current.E02 && !CINTA_RESUELTA"
+    }
+  ],
+  "savePoints": [
+    {
+      "pos": [
+        -19,
+        -14
+      ]
+    }
+  ],
+  "nudoPoints": [
+    {
+      "pos": [
+        -16,
+        -14
+      ],
+      "condition": "item.diapason_de_arcilla"
+    }
+  ],
+  "isNudo": true,
+  "nudoCondition": "item.diapason_de_arcilla"
+}

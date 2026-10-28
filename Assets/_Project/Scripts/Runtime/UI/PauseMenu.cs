@@ -92,7 +92,7 @@ namespace TimeTraveler
             canvas.gameObject.SetActive(false);
             backStack.Clear();
             if (fromTitle) { fromTitle = false; gm.Title.Show(); return; }
-            gm.SetMode(GameMode.Exploration);
+            gm.ReturnToExploration();
         }
 
         private void Update()
@@ -479,7 +479,31 @@ namespace TimeTraveler
         private void ShowNotebook()
         {
             Page(T("notebook.title"));
+            var scene = StoryDirector.CurrentScene(Db, State);
+            var objective = StoryDirector.CurrentObjective(Db, State);
+            if (scene != null) Info(T(scene.TitleKey));
+            if (objective != null) Info(T("notebook.objective", T(scene.ObjectiveKey(objective))));
             Info(T("notebook.scenes", State.Story.CompletedScenes.Count == 0 ? "—" : string.Join(", ", State.Story.CompletedScenes)));
+
+            if (State.Story.Cierres.Count > 0)
+            {
+                Info(T("notebook.cierres"));
+                foreach (var record in State.Story.Cierres)
+                {
+                    var def = Db.Cierres[record.Id];
+                    string detail = T("cierre.before") + ": " + T(def.BeforeKey) + "
+" + T("cierre.now") + ": " + T(def.NowKey(record.Value)) + "
+" + T(def.PersonKey(record.Value));
+                    Item(T(def.CauseKey), null, detail);
+                }
+            }
+
+            if (State.Story.Absents.Count > 0)
+            {
+                Info(T("notebook.absents"));
+                foreach (var id in State.Story.Absents) Item(T("absent." + id + ".name"), null, T("absent." + id + ".desc"));
+            }
+
             Info(T("notebook.flags"));
             foreach (var flag in Db.Flags.Values)
             {

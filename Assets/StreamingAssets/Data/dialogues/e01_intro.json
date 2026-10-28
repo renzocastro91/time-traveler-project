@@ -1,0 +1,57 @@
+{
+  "id": "e01_intro",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e01_intro.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e01_intro.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e01_intro.n3",
+      "speakerKey": "char.violeta.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e01_intro.n4",
+      "speakerKey": "char.angel.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e01_intro.n5",
+      "speakerKey": "char.violeta.name",
+      "next": "n6"
+    },
+    {
+      "id": "n6",
+      "textKey": "dlg.e01_intro.n6",
+      "speakerKey": "char.angel.name",
+      "next": "n7"
+    },
+    {
+      "id": "n7",
+      "textKey": "dlg.e01_intro.n7",
+      "speakerKey": "char.violeta.name",
+      "next": "n8"
+    },
+    {
+      "id": "n8",
+      "textKey": "dlg.e01_intro.n8",
+      "speakerKey": "char.angel.name",
+      "next": "n9"
+    },
+    {
+      "id": "n9",
+      "textKey": "dlg.e01_intro.n9",
+      "speakerKey": "char.violeta.name"
+    }
+  ]
+}

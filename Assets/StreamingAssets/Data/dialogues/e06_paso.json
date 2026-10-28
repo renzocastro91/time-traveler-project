@@ -1,0 +1,38 @@
+{
+  "id": "e06_paso",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e06_paso.n1",
+      "next": "n2",
+      "condition": "current.E06"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e06_paso.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e06_paso.n3",
+      "speakerKey": "char.angel.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e06_paso.n4",
+      "speakerKey": "char.violeta.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e06_paso.n5",
+      "speakerKey": "char.lia.name",
+      "actions": [
+        "nudo:e06",
+        "travel:lira_puerto:default"
+      ]
+    }
+  ]
+}

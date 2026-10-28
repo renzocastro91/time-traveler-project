@@ -1,0 +1,29 @@
+{
+  "id": "insp_lista",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_lista.r",
+      "condition": "INSP_LISTA",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_lista.p",
+      "effects": [
+        {
+          "flag": "INSP_LISTA",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E01_INSPECCIONES",
+          "op": "Add",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

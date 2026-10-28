@@ -1,0 +1,10 @@
+{
+  "id": "insp_tablillas",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.insp_tablillas.n1"
+    }
+  ]
+}

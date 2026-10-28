@@ -5,26 +5,46 @@
     {
       "id": "n1",
       "textKey": "dlg.e03_marta.n1",
-      "speakerKey": "npc.marta.name",
       "next": "n2"
     },
     {
       "id": "n2",
       "textKey": "dlg.e03_marta.n2",
-      "speakerKey": "char.angel.name",
+      "speakerKey": "npc.marta.name",
       "next": "n3"
     },
     {
       "id": "n3",
       "textKey": "dlg.e03_marta.n3",
-      "speakerKey": "npc.marta.name",
+      "speakerKey": "char.angel.name",
       "next": "n4"
     },
     {
       "id": "n4",
       "textKey": "dlg.e03_marta.n4",
+      "speakerKey": "npc.marta.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e03_marta.n5",
+      "next": "n6",
       "actions": [
         "give:llave_de_marta:1"
+      ]
+    },
+    {
+      "id": "n6",
+      "textKey": "dlg.e03_marta.n6",
+      "effects": [
+        {
+          "flag": "MARTA_E03",
+          "op": "Set",
+          "value": 1
+        }
+      ],
+      "actions": [
+        "heal"
       ]
     }
   ]

@@ -1,0 +1,19 @@
+{
+  "id": "insp_informe",
+  "start": "ya",
+  "nodes": [
+    {
+      "id": "ya",
+      "textKey": "dlg.insp_informe.ya",
+      "condition": "item.informe_de_julian",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_informe.p",
+      "actions": [
+        "give:informe_de_julian:1"
+      ]
+    }
+  ]
+}

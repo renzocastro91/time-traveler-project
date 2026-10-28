@@ -1,0 +1,25 @@
+{
+  "id": "e03_circulos",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e03_circulos.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e03_circulos.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e03_circulos.n3",
+      "actions": [
+        "scene:E04",
+        "travel:calle_2026:default",
+        "heal"
+      ]
+    }
+  ]
+}

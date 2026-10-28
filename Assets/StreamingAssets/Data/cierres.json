@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cierre_e06",
+    "scene": "E06",
+    "echoEra": "2026",
+    "flag": "E06_ENTRADA",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "decisionDialogue": "e06_guardias",
+    "onConfirmDialogue": "e06_confirmado",
+    "nextScene": "E07"
+  },
+  {
+    "id": "cierre_e07",
+    "scene": "E07",
+    "echoEra": "2026",
+    "flag": "PACTO_SURA",
+    "values": [
+      1,
+      2,
+      3
+    ],
+    "decisionDialogue": "e07_bifurcacion",
+    "onConfirmDialogue": "e07_confirmado",
+    "nextScene": "E08"
+  }
+]

@@ -1,0 +1,264 @@
+{
+  "id": "galeria_2000",
+  "era": "2000",
+  "size": [
+    30,
+    46
+  ],
+  "floorColor": "#3e4248",
+  "skyColor": "#0e1016",
+  "spawns": {
+    "default": [
+      0,
+      -20,
+      0
+    ],
+    "nudo": [
+      0,
+      19,
+      180
+    ]
+  },
+  "blocks": [
+    {
+      "pos": [
+        0,
+        1.6,
+        23.0
+      ],
+      "size": [
+        30,
+        3.2,
+        1
+      ],
+      "color": "#4a4e55"
+    },
+    {
+      "pos": [
+        0,
+        1.6,
+        -23.0
+      ],
+      "size": [
+        30,
+        3.2,
+        1
+      ],
+      "color": "#4a4e55"
+    },
+    {
+      "pos": [
+        15.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        46
+      ],
+      "color": "#4a4e55"
+    },
+    {
+      "pos": [
+        -15.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        46
+      ],
+      "color": "#4a4e55"
+    },
+    {
+      "pos": [
+        -9,
+        1.0,
+        -2
+      ],
+      "size": [
+        6,
+        2,
+        4
+      ],
+      "color": "#3a3e44"
+    },
+    {
+      "pos": [
+        9,
+        1.0,
+        8
+      ],
+      "size": [
+        6,
+        2,
+        4
+      ],
+      "color": "#3a3e44"
+    },
+    {
+      "pos": [
+        0,
+        0.03,
+        -5
+      ],
+      "size": [
+        30,
+        6,
+        0.05
+      ],
+      "color": "#2b4a5a"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "casco",
+      "pos": [
+        -11,
+        -12
+      ],
+      "dialogue": "insp_casco",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "condition": "!item.casco_de_operario",
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "foto",
+      "pos": [
+        11,
+        -1
+      ],
+      "dialogue": "insp_foto",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "condition": "!item.foto_de_turno",
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "informe",
+      "pos": [
+        -11,
+        10
+      ],
+      "dialogue": "insp_informe",
+      "model": "object",
+      "color": "#c9a46a",
+      "rotation": 180,
+      "condition": "!item.informe_de_julian",
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "presencia",
+      "pos": [
+        0,
+        9
+      ],
+      "dialogue": "insp_presencia",
+      "model": "sign",
+      "color": "#202030",
+      "rotation": 180,
+      "condition": "!resolved.g_hueco",
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "inscripciones",
+      "pos": [
+        0,
+        22
+      ],
+      "dialogue": "insp_inscripciones",
+      "model": "sign",
+      "color": "#9a9070",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    }
+  ],
+  "chests": [],
+  "enemies": [
+    {
+      "id": "g_huecos_1",
+      "pos": [
+        -5,
+        -14
+      ],
+      "encounter": "enc_estacion_huecos",
+      "respawns": false
+    },
+    {
+      "id": "g_mixto",
+      "pos": [
+        6,
+        -9
+      ],
+      "encounter": "enc_estacion_mixto",
+      "respawns": false
+    },
+    {
+      "id": "g_huecos_2",
+      "pos": [
+        4,
+        4
+      ],
+      "encounter": "enc_estacion_huecos",
+      "respawns": false
+    },
+    {
+      "id": "g_hueco",
+      "pos": [
+        0,
+        14
+      ],
+      "encounter": "enc_boss_hueco",
+      "respawns": false,
+      "condition": "item.casco_de_operario && item.foto_de_turno && item.informe_de_julian && E03_ELECCION>=1"
+    }
+  ],
+  "wild": [],
+  "exits": [
+    {
+      "pos": [
+        0,
+        -22
+      ],
+      "size": [
+        3,
+        3
+      ],
+      "toMap": "estacion_2000",
+      "toSpawn": "desde_galeria"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "t_e03_eleccion",
+      "pos": [
+        0,
+        -5
+      ],
+      "size": [
+        28,
+        3
+      ],
+      "dialogue": "e03_eleccion",
+      "once": true,
+      "condition": "current.E03 && E03_ELECCION==0"
+    }
+  ],
+  "savePoints": [],
+  "nudoPoints": [
+    {
+      "pos": [
+        0,
+        20
+      ],
+      "condition": "scene.E03 && item.diapason_de_arcilla"
+    }
+  ],
+  "isNudo": true,
+  "nudoCondition": "item.diapason_de_arcilla"
+}

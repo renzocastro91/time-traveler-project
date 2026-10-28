@@ -1,0 +1,374 @@
+{
+  "id": "calle_2026",
+  "era": "2026",
+  "size": [
+    54,
+    40
+  ],
+  "floorColor": "#3b4250",
+  "skyColor": "#0c1022",
+  "spawns": {
+    "default": [
+      -22,
+      -15,
+      45
+    ],
+    "desde_archivo": [
+      22,
+      12,
+      180
+    ],
+    "desde_paso": [
+      -22,
+      14,
+      90
+    ],
+    "nudo": [
+      -23,
+      -11,
+      0
+    ]
+  },
+  "blocks": [
+    {
+      "pos": [
+        0,
+        3.0,
+        20.0
+      ],
+      "size": [
+        54,
+        6,
+        1
+      ],
+      "color": "#2e3440"
+    },
+    {
+      "pos": [
+        0,
+        3.0,
+        -20.0
+      ],
+      "size": [
+        54,
+        6,
+        1
+      ],
+      "color": "#2e3440"
+    },
+    {
+      "pos": [
+        27.0,
+        3.0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        40
+      ],
+      "color": "#2e3440"
+    },
+    {
+      "pos": [
+        -27.0,
+        3.0,
+        0
+      ],
+      "size": [
+        1,
+        6,
+        40
+      ],
+      "color": "#2e3440"
+    },
+    {
+      "pos": [
+        -6,
+        2.5,
+        10
+      ],
+      "size": [
+        10,
+        5,
+        2
+      ],
+      "color": "#1e7a8a"
+    },
+    {
+      "pos": [
+        10,
+        3.0,
+        10
+      ],
+      "size": [
+        8,
+        6,
+        2
+      ],
+      "color": "#8a3a7a"
+    },
+    {
+      "pos": [
+        24,
+        4.5,
+        -4
+      ],
+      "size": [
+        3,
+        9,
+        14
+      ],
+      "color": "#232a38"
+    },
+    {
+      "pos": [
+        -14,
+        3.5,
+        -2
+      ],
+      "size": [
+        6,
+        7,
+        6
+      ],
+      "color": "#283040"
+    },
+    {
+      "pos": [
+        0,
+        0.03,
+        -12
+      ],
+      "size": [
+        54,
+        6,
+        0.04
+      ],
+      "color": "#20242c"
+    },
+    {
+      "pos": [
+        0,
+        2.0,
+        2
+      ],
+      "size": [
+        22,
+        4,
+        8
+      ],
+      "color": "#c8b890",
+      "layer": "antes"
+    },
+    {
+      "pos": [
+        12,
+        0.05,
+        -6
+      ],
+      "size": [
+        10,
+        0.1,
+        6
+      ],
+      "color": "#5f6670",
+      "layer": "antes"
+    },
+    {
+      "pos": [
+        -14,
+        1.5,
+        6
+      ],
+      "size": [
+        5,
+        3,
+        4
+      ],
+      "color": "#c84a4a",
+      "layer": "antes"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "arbol",
+      "pos": [
+        -10,
+        4
+      ],
+      "dialogue": "insp_arbol",
+      "model": "object",
+      "color": "#3f7a3a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "toma",
+      "pos": [
+        6,
+        -8
+      ],
+      "dialogue": "insp_toma",
+      "model": "object",
+      "color": "#7a7a7a",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "museo",
+      "pos": [
+        18,
+        4
+      ],
+      "dialogue": "insp_mural_museo",
+      "model": "object",
+      "color": "#d0c8b0",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "placa",
+      "pos": [
+        -4,
+        -9
+      ],
+      "dialogue": "insp_placa",
+      "model": "sign",
+      "color": "#b0a070",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "periodicos",
+      "pos": [
+        8,
+        14
+      ],
+      "dialogue": "insp_periodicos",
+      "model": "object",
+      "color": "#e0e0d0",
+      "rotation": 180,
+      "promptKey": "interact.inspect"
+    },
+    {
+      "id": "anciana",
+      "pos": [
+        -16,
+        -8
+      ],
+      "dialogue": "e04_transeunte",
+      "model": "person",
+      "color": "#8a7a9a",
+      "rotation": 180
+    },
+    {
+      "id": "vendedor",
+      "pos": [
+        -20,
+        8
+      ],
+      "dialogue": "vendedor_reloj",
+      "model": "person",
+      "color": "#8a7a50",
+      "rotation": 180
+    }
+  ],
+  "chests": [],
+  "enemies": [
+    {
+      "id": "c_drones_1",
+      "pos": [
+        4,
+        0
+      ],
+      "encounter": "enc_2026_drones",
+      "respawns": true
+    },
+    {
+      "id": "c_drones_2",
+      "pos": [
+        14,
+        -12
+      ],
+      "encounter": "enc_2026_drones",
+      "respawns": true
+    }
+  ],
+  "wild": [
+    {
+      "id": "w_pipistrelo",
+      "pos": [
+        20,
+        -14
+      ],
+      "species": "pipistrelo",
+      "level": 6
+    }
+  ],
+  "exits": [
+    {
+      "pos": [
+        24,
+        16
+      ],
+      "size": [
+        3,
+        3
+      ],
+      "toMap": "archivo_2026",
+      "toSpawn": "default",
+      "condition": "scene.E04",
+      "lockedTextKey": "exit.locked.archive"
+    },
+    {
+      "pos": [
+        -25,
+        16
+      ],
+      "size": [
+        3,
+        3
+      ],
+      "toMap": "paso_2026",
+      "toSpawn": "default",
+      "condition": "scene.E05",
+      "lockedTextKey": "exit.locked.underpass"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "t_e04_llegada",
+      "pos": [
+        -22,
+        -15
+      ],
+      "size": [
+        6,
+        6
+      ],
+      "dialogue": "e04_llegada",
+      "once": true,
+      "condition": "current.E04"
+    }
+  ],
+  "savePoints": [
+    {
+      "pos": [
+        -18,
+        -17
+      ]
+    }
+  ],
+  "nudoPoints": [
+    {
+      "pos": [
+        -24,
+        -12
+      ],
+      "condition": "item.diapason_de_arcilla"
+    }
+  ],
+  "isNudo": true,
+  "nudoCondition": "item.diapason_de_arcilla"
+}

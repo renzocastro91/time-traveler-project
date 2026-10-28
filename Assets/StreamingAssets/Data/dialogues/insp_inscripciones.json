@@ -1,0 +1,10 @@
+{
+  "id": "insp_inscripciones",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.insp_inscripciones.n1"
+    }
+  ]
+}

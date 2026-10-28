@@ -22,10 +22,12 @@ namespace TimeTraveler
     public sealed class NpcInteractable : Interactable
     {
         public string DialogueId;
+        /// <summary>Las personas se giran hacia quien les habla; los objetos no.</summary>
+        public bool FaceOnTalk = true;
 
         public override void Interact(PlayerController player)
         {
-            FacePlayer(player);
+            if (FaceOnTalk) FacePlayer(player);
             Gm.StartDialogue(DialogueId);
         }
     }
@@ -64,20 +66,8 @@ namespace TimeTraveler
     {
         public override void Interact(PlayerController player)
         {
-            var gm = Gm;
-            foreach (var c in gm.State.Characters.Values)
-            {
-                var stats = StatCalculator.ForCharacter(gm.Db, c);
-                c.Hp = stats.Get(StatType.MaxHp);
-                c.Mp = stats.Get(StatType.MaxMp);
-            }
-            foreach (var cr in gm.State.Sanctuary.Creatures)
-            {
-                var stats = StatCalculator.ForCreature(gm.Db, cr);
-                cr.Hp = stats.Get(StatType.MaxHp);
-                cr.Mp = stats.Get(StatType.MaxMp);
-            }
-            gm.Pause.OpenSaveScreen();
+            StoryActions.HealAll(Gm.Db, Gm.State);
+            Gm.Pause.OpenSaveScreen();
         }
     }
 
@@ -163,12 +153,14 @@ namespace TimeTraveler
 
     /// <summary>
     /// Grupo de enemigos visible en el mapa (no hay encuentros aleatorios). Al tocarlo, el combate
-    /// empieza ahí mismo. Si el grupo huye, el enemigo queda inactivo unos segundos.
+    /// empieza ahí mismo. Si el grupo huye, el enemigo queda inactivo unos segundos. Los que no
+    /// reaparecen quedan resueltos para siempre al vencerlos (su id se usa en condiciones: resolved.id).
     /// </summary>
     public sealed class MapEnemy : MonoBehaviour
     {
         public string UniqueId;
         public string EncounterId;
+        public bool Respawns;
         public float ChaseRadius = 5f;
         public float ChaseSpeed = 2.4f;
 
@@ -189,7 +181,7 @@ namespace TimeTraveler
         private void Update()
         {
             var gm = GameManager.Instance;
-            if (gm == null || gm.Mode != GameMode.Exploration) return;
+            if (gm == null || !gm.IsSettledIn(GameMode.Exploration)) return;
             if (cooldown > 0f) { cooldown -= Time.deltaTime; return; }
 
             var leader = PartyVisuals.Instance != null ? PartyVisuals.Instance.Leader : null;
@@ -208,8 +200,8 @@ namespace TimeTraveler
         {
             if (cooldown > 0f) return;
             var gm = GameManager.Instance;
-            if (gm.Mode != GameMode.Exploration) return;
-            gm.StartBattle(EncounterId, transform.position, this);
+            if (!gm.IsSettledIn(GameMode.Exploration)) return;
+            gm.StartBattle(EncounterId, transform.position, this, null);
         }
     }
 }

@@ -151,8 +151,8 @@ namespace TimeTraveler
             var button = UIKit.Button(list, GameManager.T("battle.continue"), () =>
             {
                 canvas.gameObject.SetActive(false);
-                gm.SetMode(GameMode.Exploration);
                 onDone(result.Accepted);
+                gm.ReturnToExploration();
             });
             UIKit.Focus(button);
         }

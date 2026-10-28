@@ -1,0 +1,29 @@
+{
+  "id": "insp_casete",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_casete.r",
+      "condition": "INSP_CASETE",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_casete.p",
+      "effects": [
+        {
+          "flag": "INSP_CASETE",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E01_INSPECCIONES",
+          "op": "Add",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

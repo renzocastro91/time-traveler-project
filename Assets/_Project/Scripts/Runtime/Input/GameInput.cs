@@ -12,6 +12,7 @@ namespace TimeTraveler
     ///  Cancelar:  Escape / X / Retroceso / botón Este (B, Círculo)
     ///  Menú:      Tab / M / Start (Options)
     ///  Correr:    Shift / botón Oeste (X, Cuadrado)
+    ///  ANTES/AHORA: Q / LB (mantener)
     ///  Notas de Resonancia: J K L / botones Oeste, Norte, Este
     /// </summary>
     public sealed class GameInput : MonoBehaviour
@@ -23,6 +24,8 @@ namespace TimeTraveler
         public InputAction Cancel { get; private set; }
         public InputAction Menu { get; private set; }
         public InputAction Run { get; private set; }
+        /// <summary>Mantener para ver la superposición ANTES/AHORA (Q / LB).</summary>
+        public InputAction Overlay { get; private set; }
         public InputAction[] Notes { get; private set; }
 
         /// <summary>True si el último dispositivo usado fue un mando (para mostrar los iconos correctos).</summary>
@@ -42,6 +45,7 @@ namespace TimeTraveler
             Cancel = Button("Cancel", "<Keyboard>/escape", "<Keyboard>/x", "<Keyboard>/backspace", "<Gamepad>/buttonEast");
             Menu = Button("Menu", "<Keyboard>/tab", "<Keyboard>/m", "<Gamepad>/start");
             Run = Button("Run", "<Keyboard>/leftShift", "<Gamepad>/buttonWest");
+            Overlay = Button("Overlay", "<Keyboard>/q", "<Gamepad>/leftShoulder");
             Notes = new[]
             {
                 Button("Note1", "<Keyboard>/j", "<Gamepad>/buttonWest"),
@@ -49,7 +53,7 @@ namespace TimeTraveler
                 Button("Note3", "<Keyboard>/l", "<Gamepad>/buttonEast"),
             };
 
-            foreach (var action in new[] { Move, Confirm, Cancel, Menu, Run }) action.Enable();
+            foreach (var action in new[] { Move, Confirm, Cancel, Menu, Run, Overlay }) action.Enable();
             foreach (var note in Notes) note.Enable();
         }
 
@@ -70,7 +74,7 @@ namespace TimeTraveler
 
         private void OnDestroy()
         {
-            foreach (var action in new[] { Move, Confirm, Cancel, Menu, Run }) action?.Dispose();
+            foreach (var action in new[] { Move, Confirm, Cancel, Menu, Run, Overlay }) action?.Dispose();
             if (Notes != null) foreach (var note in Notes) note.Dispose();
         }
 

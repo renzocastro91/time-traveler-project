@@ -703,5 +703,25 @@
   {
     "id": "diapason_de_arcilla",
     "category": "Clave"
+  },
+  {
+    "id": "casco_de_operario",
+    "category": "Clave"
+  },
+  {
+    "id": "foto_de_turno",
+    "category": "Clave"
+  },
+  {
+    "id": "informe_de_julian",
+    "category": "Clave"
+  },
+  {
+    "id": "nomina_mojada",
+    "category": "Clave"
+  },
+  {
+    "id": "telefono_de_lia",
+    "category": "Clave"
   }
 ]

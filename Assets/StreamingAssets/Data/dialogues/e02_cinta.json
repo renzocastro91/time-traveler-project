@@ -1,0 +1,48 @@
+{
+  "id": "e02_cinta",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e02_cinta.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e02_cinta.n2",
+      "speakerKey": "npc.voz_cinta.name",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e02_cinta.n3",
+      "speakerKey": "char.angel.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e02_cinta.n4",
+      "speakerKey": "char.violeta.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e02_cinta.n5",
+      "speakerKey": "char.angel.name",
+      "next": "n6"
+    },
+    {
+      "id": "n6",
+      "textKey": "dlg.e02_cinta.n6",
+      "speakerKey": "char.violeta.name",
+      "next": "n7"
+    },
+    {
+      "id": "n7",
+      "textKey": "dlg.e02_cinta.n7",
+      "actions": [
+        "puzzle:cinta"
+      ]
+    }
+  ]
+}

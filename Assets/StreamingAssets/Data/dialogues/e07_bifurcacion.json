@@ -1,0 +1,98 @@
+{
+  "id": "e07_bifurcacion",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e07_bifurcacion.n1",
+      "next": "n2",
+      "actions": [
+        "nudo:e07"
+      ]
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e07_bifurcacion.n2",
+      "choices": [
+        {
+          "textKey": "dlg.e07_bifurcacion.n2.c0",
+          "next": "a",
+          "effects": [
+            {
+              "flag": "PACTO_SURA",
+              "op": "Set",
+              "value": 1
+            },
+            {
+              "flag": "CONSENTIMIENTO",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e07_bifurcacion.n2.c1",
+          "next": "b",
+          "effects": [
+            {
+              "flag": "PACTO_SURA",
+              "op": "Set",
+              "value": 2
+            },
+            {
+              "flag": "PLURALIDAD",
+              "op": "Add",
+              "value": 1
+            },
+            {
+              "flag": "TESTIMONIOS",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e07_bifurcacion.n2.c2",
+          "next": "c",
+          "effects": [
+            {
+              "flag": "PACTO_SURA",
+              "op": "Set",
+              "value": 3
+            },
+            {
+              "flag": "DEUDA",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a",
+      "textKey": "dlg.e07_bifurcacion.a",
+      "speakerKey": "char.sura.name",
+      "next": "fin"
+    },
+    {
+      "id": "b",
+      "textKey": "dlg.e07_bifurcacion.b",
+      "speakerKey": "char.sura.name",
+      "next": "fin"
+    },
+    {
+      "id": "c",
+      "textKey": "dlg.e07_bifurcacion.c",
+      "next": "fin"
+    },
+    {
+      "id": "fin",
+      "textKey": "dlg.e07_bifurcacion.fin",
+      "actions": [
+        "give:diapason_de_arcilla:1",
+        "cierre:cierre_e07"
+      ]
+    }
+  ]
+}

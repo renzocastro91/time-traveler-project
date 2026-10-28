@@ -1,0 +1,74 @@
+{
+  "id": "e03_eleccion",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e03_eleccion.n1",
+      "choices": [
+        {
+          "textKey": "dlg.e03_eleccion.n1.c0",
+          "next": "a",
+          "effects": [
+            {
+              "flag": "E03_ELECCION",
+              "op": "Set",
+              "value": 1
+            },
+            {
+              "flag": "TESTIMONIOS",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e03_eleccion.n1.c1",
+          "next": "b",
+          "effects": [
+            {
+              "flag": "E03_ELECCION",
+              "op": "Set",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e03_eleccion.n1.c2",
+          "next": "c",
+          "effects": [
+            {
+              "flag": "E03_ELECCION",
+              "op": "Set",
+              "value": 3
+            },
+            {
+              "flag": "TESTIMONIOS",
+              "op": "Add",
+              "value": 1
+            }
+          ],
+          "condition": "PLANO_OCULTO"
+        }
+      ]
+    },
+    {
+      "id": "a",
+      "textKey": "dlg.e03_eleccion.a",
+      "actions": [
+        "give:nomina_mojada:1"
+      ]
+    },
+    {
+      "id": "b",
+      "textKey": "dlg.e03_eleccion.b"
+    },
+    {
+      "id": "c",
+      "textKey": "dlg.e03_eleccion.c",
+      "actions": [
+        "give:nomina_mojada:1"
+      ]
+    }
+  ]
+}

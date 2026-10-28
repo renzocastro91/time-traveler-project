@@ -20,6 +20,11 @@ namespace TimeTraveler.Core
         public readonly Dictionary<string, EncounterDef> Encounters = new Dictionary<string, EncounterDef>();
         public readonly Dictionary<string, FlagDef> Flags = new Dictionary<string, FlagDef>();
         public readonly Dictionary<string, DialogueDef> Dialogues = new Dictionary<string, DialogueDef>();
+        public readonly Dictionary<string, MapDef> Maps = new Dictionary<string, MapDef>();
+        public readonly Dictionary<string, SceneDef> Scenes = new Dictionary<string, SceneDef>();
+        public readonly Dictionary<string, CierreDef> Cierres = new Dictionary<string, CierreDef>();
+        /// <summary>Ids de fichas de ausentes conocidas (textos absent.{id}.name / .desc).</summary>
+        public readonly List<string> AbsentIds = new List<string>();
 
         public static GameDatabase LoadFromDirectory(string directory)
         {
@@ -32,6 +37,20 @@ namespace TimeTraveler.Core
             db.AddAll(LoadList<EnemyDef>(directory, "enemies.json"), db.Enemies, d => d.Id);
             db.AddAll(LoadList<EncounterDef>(directory, "encounters.json"), db.Encounters, d => d.Id);
             db.AddAll(LoadList<FlagDef>(directory, "flags.json"), db.Flags, d => d.Id);
+            db.AddAll(LoadList<SceneDef>(directory, "scenes.json"), db.Scenes, d => d.Id);
+            db.AddAll(LoadList<CierreDef>(directory, "cierres.json"), db.Cierres, d => d.Id);
+            db.AbsentIds.AddRange(LoadList<string>(directory, "absents.json"));
+
+            string mapDir = Path.Combine(directory, "maps");
+            if (Directory.Exists(mapDir))
+            {
+                foreach (string file in Directory.GetFiles(mapDir, "*.json"))
+                {
+                    var map = Json.Deserialize<MapDef>(File.ReadAllText(file));
+                    if (db.Maps.ContainsKey(map.Id)) throw new InvalidDataException("Mapa duplicado: " + map.Id);
+                    db.Maps[map.Id] = map;
+                }
+            }
 
             string dialogueDir = Path.Combine(directory, "dialogues");
             if (Directory.Exists(dialogueDir))
@@ -69,6 +88,7 @@ namespace TimeTraveler.Core
         public CreatureSpeciesDef Species(string id) { return Get(Creatures, id, "criatura"); }
         public EnemyDef Enemy(string id) { return Get(Enemies, id, "enemigo"); }
         public EncounterDef Encounter(string id) { return Get(Encounters, id, "encuentro"); }
+        public MapDef Map(string id) { return Get(Maps, id, "mapa"); }
 
         private static T Get<T>(Dictionary<string, T> dict, string id, string kind)
         {
@@ -144,12 +164,43 @@ namespace TimeTraveler.Core
                     check(DramaticRuleRegistry.Exists(enc.DramaticRule), "Encuentro " + enc.Id + ": regla dramática desconocida " + enc.DramaticRule);
             }
 
+            foreach (var map in Maps.Values) ValidateMap(map, check);
+
+            foreach (var p in Puzzles.OnSolved)
+            {
+                check(Flags.ContainsKey(p.Value.Flag), "Puzzle " + p.Key + ": bandera inexistente " + p.Value.Flag);
+                check(Dialogues.ContainsKey(p.Value.Dialogue), "Puzzle " + p.Key + ": diálogo inexistente " + p.Value.Dialogue);
+            }
+
+            foreach (var scene in Scenes.Values)
+            {
+                if (scene.OnObjectivesComplete != null)
+                    check(Dialogues.ContainsKey(scene.OnObjectivesComplete), "Escena " + scene.Id + ": diálogo inexistente " + scene.OnObjectivesComplete);
+                foreach (var o in scene.Objectives) CheckCondition(o.Condition, "Escena " + scene.Id + "/" + o.Id, check);
+            }
+
+            foreach (var c in Cierres.Values)
+            {
+                check(Flags.ContainsKey(c.Flag), "Cierre " + c.Id + ": bandera inexistente " + c.Flag);
+                check(c.Values.Count > 0, "Cierre " + c.Id + ": sin variantes");
+                check(c.DecisionDialogue != null && Dialogues.ContainsKey(c.DecisionDialogue), "Cierre " + c.Id + ": diálogo de decisión inexistente " + c.DecisionDialogue);
+                if (c.OnConfirmDialogue != null) check(Dialogues.ContainsKey(c.OnConfirmDialogue), "Cierre " + c.Id + ": diálogo de confirmación inexistente " + c.OnConfirmDialogue);
+                if (c.NextScene != null) check(Scenes.ContainsKey(c.NextScene), "Cierre " + c.Id + ": escena siguiente inexistente " + c.NextScene);
+            }
+
             foreach (var dialogue in Dialogues.Values)
             {
+                foreach (var node in dialogue.Nodes)
+                {
+                    CheckCondition(node.Condition, "Diálogo " + dialogue.Id + "/" + node.Id, check);
+                    foreach (var choice in node.Choices) CheckCondition(choice.Condition, "Diálogo " + dialogue.Id + "/" + node.Id, check);
+                    foreach (var action in node.Actions) CheckAction(action, "Diálogo " + dialogue.Id + "/" + node.Id, check);
+                }
                 check(dialogue.Find(dialogue.Start) != null, "Diálogo " + dialogue.Id + ": nodo inicial inexistente");
                 foreach (var node in dialogue.Nodes)
                 {
                     if (node.Next != null) check(dialogue.Find(node.Next) != null, "Diálogo " + dialogue.Id + "/" + node.Id + ": next inexistente " + node.Next);
+                    if (node.Else != null) check(dialogue.Find(node.Else) != null, "Diálogo " + dialogue.Id + "/" + node.Id + ": else inexistente " + node.Else);
                     foreach (var choice in node.Choices)
                         if (choice.Next != null) check(dialogue.Find(choice.Next) != null, "Diálogo " + dialogue.Id + "/" + node.Id + ": opción hacia nodo inexistente " + choice.Next);
                     foreach (var effect in AllEffects(node))
@@ -157,6 +208,101 @@ namespace TimeTraveler.Core
                 }
             }
             return errors;
+        }
+
+        private void ValidateMap(MapDef map, Action<bool, string> check)
+        {
+            string where = "Mapa " + map.Id;
+            check(map.Spawns.ContainsKey("default"), where + ": falta el punto de aparición 'default'");
+            foreach (var n in map.Npcs)
+            {
+                check(Dialogues.ContainsKey(n.Dialogue ?? ""), where + "/" + n.Id + ": diálogo inexistente " + n.Dialogue);
+                CheckCondition(n.Condition, where + "/" + n.Id, check);
+            }
+            foreach (var c in map.Chests) check(Items.ContainsKey(c.ItemId ?? ""), where + "/" + c.Id + ": objeto inexistente " + c.ItemId);
+            foreach (var e in map.Enemies)
+            {
+                check(Encounters.ContainsKey(e.Encounter ?? ""), where + "/" + e.Id + ": encuentro inexistente " + e.Encounter);
+                CheckCondition(e.Condition, where + "/" + e.Id, check);
+            }
+            foreach (var w in map.Wild) check(Creatures.ContainsKey(w.Species ?? ""), where + "/" + w.Id + ": especie inexistente " + w.Species);
+            foreach (var x in map.Exits)
+            {
+                MapDef target;
+                check(Maps.TryGetValue(x.ToMap ?? "", out target), where + ": salida a mapa inexistente " + x.ToMap);
+                if (target != null) check(target.Spawns.ContainsKey(x.ToSpawn), where + ": salida a punto inexistente " + x.ToMap + "/" + x.ToSpawn);
+                CheckCondition(x.Condition, where + "/salida", check);
+            }
+            foreach (var t in map.Triggers)
+            {
+                check(Dialogues.ContainsKey(t.Dialogue ?? ""), where + "/" + t.Id + ": diálogo inexistente " + t.Dialogue);
+                CheckCondition(t.Condition, where + "/" + t.Id, check);
+            }
+            foreach (var p in map.NudoPoints) CheckCondition(p.Condition, where + "/nudo", check);
+            CheckCondition(map.NudoCondition, where + "/nudoCondition", check);
+        }
+
+        /// <summary>Comprueba que cada identificador de una condición existe (bandera, objeto, escena…).</summary>
+        private void CheckCondition(string condition, string where, Action<bool, string> check)
+        {
+            if (string.IsNullOrWhiteSpace(condition)) return;
+            try
+            {
+                foreach (string name in ConditionEvaluator.Identifiers(condition))
+                    check(IsKnownVariable(name), where + ": variable desconocida en condición '" + name + "'");
+            }
+            catch (Exception e)
+            {
+                check(false, where + ": condición mal escrita '" + condition + "' (" + e.Message + ")");
+            }
+        }
+
+        private bool IsKnownVariable(string name)
+        {
+            int dot = name.IndexOf('.');
+            if (dot < 0) return name == "money" || Flags.ContainsKey(name);
+            string prefix = name.Substring(0, dot), rest = name.Substring(dot + 1);
+            switch (prefix)
+            {
+                case "item": return Items.ContainsKey(rest);
+                case "recruited": return Characters.ContainsKey(rest);
+                case "scene":
+                case "current": return Scenes.ContainsKey(rest) || rest == "PRUEBAS";
+                case "cierre": return Cierres.ContainsKey(rest);
+                case "visited": return Maps.ContainsKey(rest);
+                case "absent": return AbsentIds.Contains(rest);
+                case "resolved": return true;
+                default: return false;
+            }
+        }
+
+        private void CheckAction(string action, string where, Action<bool, string> check)
+        {
+            string[] p = action.Split(':');
+            string arg = p.Length > 1 ? p[1] : "";
+            switch (p[0])
+            {
+                case "give": check(Items.ContainsKey(arg), where + ": give de objeto inexistente " + arg); break;
+                case "take": check(Items.ContainsKey(arg), where + ": take de objeto inexistente " + arg); break;
+                case "recruit": check(Characters.ContainsKey(arg), where + ": recruit de personaje inexistente " + arg); break;
+                case "battle": check(Encounters.ContainsKey(arg), where + ": battle de encuentro inexistente " + arg); break;
+                case "dialogue": check(Dialogues.ContainsKey(arg), where + ": dialogue inexistente " + arg); break;
+                case "scene": check(Scenes.ContainsKey(arg), where + ": escena inexistente " + arg); break;
+                case "cierre": check(Cierres.ContainsKey(arg), where + ": cierre inexistente " + arg); break;
+                case "absent": check(AbsentIds.Contains(arg), where + ": ausente desconocido " + arg); break;
+                case "travel":
+                    MapDef map;
+                    check(Maps.TryGetValue(arg, out map), where + ": travel a mapa inexistente " + arg);
+                    if (map != null && p.Length > 2) check(map.Spawns.ContainsKey(p[2]), where + ": travel a punto inexistente " + arg + "/" + p[2]);
+                    break;
+                case "puzzle": check(Puzzles.OnSolved.ContainsKey(arg), where + ": puzzle desconocido " + arg); break;
+                case "resolve":
+                case "money":
+                case "nudo":
+                case "heal":
+                case "endact": break;
+                default: check(false, where + ": acción desconocida " + action); break;
+            }
         }
 
         private static IEnumerable<FlagEffect> AllEffects(DialogueNode node)
@@ -176,6 +322,19 @@ namespace TimeTraveler.Core
             foreach (var s in Creatures.Values) { yield return s.NameKey; yield return s.DescKey; }
             foreach (var e in Enemies.Values) yield return e.NameKey;
             foreach (var f in Flags.Values) yield return f.DescKey;
+            foreach (var m in Maps.Values) yield return m.NameKey;
+            foreach (var s in Scenes.Values)
+            {
+                yield return s.TitleKey;
+                foreach (var o in s.Objectives) yield return s.ObjectiveKey(o);
+            }
+            foreach (var c in Cierres.Values)
+            {
+                yield return c.CauseKey;
+                yield return c.BeforeKey;
+                foreach (int v in c.Values) { yield return c.NowKey(v); yield return c.PersonKey(v); }
+            }
+            foreach (var a in AbsentIds) { yield return "absent." + a + ".name"; yield return "absent." + a + ".desc"; }
             foreach (var d in Dialogues.Values)
                 foreach (var n in d.Nodes)
                 {

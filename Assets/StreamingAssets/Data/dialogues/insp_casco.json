@@ -1,0 +1,19 @@
+{
+  "id": "insp_casco",
+  "start": "ya",
+  "nodes": [
+    {
+      "id": "ya",
+      "textKey": "dlg.insp_casco.ya",
+      "condition": "item.casco_de_operario",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_casco.p",
+      "actions": [
+        "give:casco_de_operario:1"
+      ]
+    }
+  ]
+}

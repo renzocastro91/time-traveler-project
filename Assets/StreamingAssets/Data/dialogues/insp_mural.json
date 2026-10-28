@@ -1,0 +1,34 @@
+{
+  "id": "insp_mural",
+  "start": "despues",
+  "nodes": [
+    {
+      "id": "despues",
+      "textKey": "dlg.insp_mural.despues",
+      "condition": "CINTA_RESUELTA",
+      "else": "r"
+    },
+    {
+      "id": "r",
+      "textKey": "dlg.insp_mural.r",
+      "condition": "INSP_MURAL",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_mural.p",
+      "effects": [
+        {
+          "flag": "INSP_MURAL",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E01_INSPECCIONES",
+          "op": "Add",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

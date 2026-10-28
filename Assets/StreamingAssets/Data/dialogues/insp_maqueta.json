@@ -1,0 +1,41 @@
+{
+  "id": "insp_maqueta",
+  "start": "plano",
+  "nodes": [
+    {
+      "id": "plano",
+      "textKey": "dlg.insp_maqueta.plano",
+      "condition": "INSP_MAQUETA && !PLANO_OCULTO",
+      "effects": [
+        {
+          "flag": "PLANO_OCULTO",
+          "op": "Set",
+          "value": 1
+        }
+      ],
+      "else": "r"
+    },
+    {
+      "id": "r",
+      "textKey": "dlg.insp_maqueta.r",
+      "condition": "INSP_MAQUETA",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_maqueta.p",
+      "effects": [
+        {
+          "flag": "INSP_MAQUETA",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E01_INSPECCIONES",
+          "op": "Add",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

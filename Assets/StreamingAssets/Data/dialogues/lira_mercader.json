@@ -1,0 +1,14 @@
+{
+  "id": "lira_mercader",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.lira_mercader.n1",
+      "speakerKey": "npc.mercader.name",
+      "actions": [
+        "give:pan_de_lira:1"
+      ]
+    }
+  ]
+}

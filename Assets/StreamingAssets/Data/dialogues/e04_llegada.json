@@ -1,0 +1,21 @@
+{
+  "id": "e04_llegada",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e04_llegada.n1",
+      "next": "n2",
+      "condition": "current.E04"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e04_llegada.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e04_llegada.n3"
+    }
+  ]
+}

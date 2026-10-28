@@ -124,5 +124,101 @@
     "min": 0,
     "max": 3,
     "initial": 0
+  },
+  {
+    "id": "INSP_ALBUM",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "INSP_LISTA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "INSP_CASETE",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "INSP_MAQUETA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "INSP_MURAL",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "CINTA_RESUELTA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "MARTA_E03",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E04_ARBOL",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E04_TOMA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E04_MURAL",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E04_PERIODICOS",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E07_SIGNOS",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E01_INSPECCIONES",
+    "min": 0,
+    "max": 5,
+    "initial": 0
+  },
+  {
+    "id": "E04_PUNTOS",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "E05_ESTRATEGIA",
+    "min": 0,
+    "max": 2,
+    "initial": 0
+  },
+  {
+    "id": "E06_ENTRADA",
+    "min": 0,
+    "max": 3,
+    "initial": 0
   }
 ]

@@ -1,0 +1,18 @@
+{
+  "id": "e05_despues",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e05_despues.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e05_despues.n2",
+      "actions": [
+        "scene:E06"
+      ]
+    }
+  ]
+}

@@ -159,14 +159,13 @@ namespace TimeTraveler.Core.Tests
             var state = GameState.NewGame(db);
             var actions = new System.Collections.Generic.List<string>();
             var runner = new DialogueRunner(db, state, actions.Add);
-            runner.Start("e01_aula");
-            while (runner.VisibleChoices().Count == 0) runner.Advance();
-            Assert.Equal("n9", runner.Current.Id);
+            runner.Start("e01_cuaderno");
+            Assert.Equal("n1", runner.Current.Id);
             runner.Choose(0);
             Assert.Equal(1, state.Flags.Get("CONFIANZA_VA"));
             Assert.Equal(1, state.Flags.Get("CONSENTIMIENTO"));
             runner.Advance();
-            Assert.Equal("n11", runner.Current.Id);
+            Assert.Equal("n3", runner.Current.Id);
             Assert.Contains("scene:E02", actions);
             runner.Advance();
             Assert.True(runner.IsFinished);
@@ -178,7 +177,7 @@ namespace TimeTraveler.Core.Tests
             var db = TestData.Db;
             var state = GameState.NewGame(db);
             var runner = new DialogueRunner(db, state, _ => { });
-            runner.Start("proto_vendedor");
+            runner.Start("vendedor_reloj");
             runner.Advance();
             Assert.Single(runner.VisibleChoices());
             state.Inventory.Money = 1000;

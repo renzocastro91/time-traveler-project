@@ -1,0 +1,82 @@
+{
+  "id": "e02_resuelto",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e02_resuelto.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e02_resuelto.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e02_resuelto.n3",
+      "speakerKey": "npc.profesora.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e02_resuelto.n4",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e02_resuelto.n5",
+      "choices": [
+        {
+          "textKey": "dlg.e02_resuelto.n5.c0",
+          "next": "n6a",
+          "effects": [
+            {
+              "flag": "FICHA_GABRIEL",
+              "op": "Set",
+              "value": 1
+            },
+            {
+              "flag": "TESTIMONIOS",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e02_resuelto.n5.c1",
+          "next": "n6b",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "n6a",
+      "textKey": "dlg.e02_resuelto.n6a",
+      "next": "n7",
+      "actions": [
+        "give:ficha_gabriel:1",
+        "absent:gabriel"
+      ]
+    },
+    {
+      "id": "n6b",
+      "textKey": "dlg.e02_resuelto.n6b",
+      "next": "n7"
+    },
+    {
+      "id": "n7",
+      "textKey": "dlg.e02_resuelto.n7",
+      "speakerKey": "char.violeta.name",
+      "next": "n8"
+    },
+    {
+      "id": "n8",
+      "textKey": "dlg.e02_resuelto.n8",
+      "speakerKey": "char.angel.name",
+      "actions": [
+        "scene:E03"
+      ]
+    }
+  ]
+}

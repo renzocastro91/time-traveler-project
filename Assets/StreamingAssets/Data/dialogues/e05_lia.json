@@ -1,0 +1,97 @@
+{
+  "id": "e05_lia",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e05_lia.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e05_lia.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e05_lia.n3",
+      "speakerKey": "char.lia.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e05_lia.n4",
+      "speakerKey": "char.angel.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e05_lia.n5",
+      "speakerKey": "char.lia.name",
+      "next": "n6"
+    },
+    {
+      "id": "n6",
+      "textKey": "dlg.e05_lia.n6",
+      "speakerKey": "char.violeta.name",
+      "next": "n7"
+    },
+    {
+      "id": "n7",
+      "textKey": "dlg.e05_lia.n7",
+      "speakerKey": "char.lia.name",
+      "next": "n8"
+    },
+    {
+      "id": "n8",
+      "textKey": "dlg.e05_lia.n8",
+      "choices": [
+        {
+          "textKey": "dlg.e05_lia.n8.c0",
+          "next": "n9",
+          "effects": [
+            {
+              "flag": "E05_ESTRATEGIA",
+              "op": "Set",
+              "value": 1
+            },
+            {
+              "flag": "TESTIMONIOS",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "textKey": "dlg.e05_lia.n8.c1",
+          "next": "n9",
+          "effects": [
+            {
+              "flag": "E05_ESTRATEGIA",
+              "op": "Set",
+              "value": 2
+            },
+            {
+              "flag": "CONSENTIMIENTO",
+              "op": "Add",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "textKey": "dlg.e05_lia.n9",
+      "next": "n10"
+    },
+    {
+      "id": "n10",
+      "textKey": "dlg.e05_lia.n10",
+      "actions": [
+        "recruit:lia:5",
+        "give:telefono_de_lia:1"
+      ]
+    }
+  ]
+}

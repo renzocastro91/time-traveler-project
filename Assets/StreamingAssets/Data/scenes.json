@@ -1,0 +1,120 @@
+[
+  {
+    "id": "E01",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "inspeccionar",
+        "condition": "E01_INSPECCIONES>=5"
+      }
+    ],
+    "onObjectivesComplete": "e01_cuaderno"
+  },
+  {
+    "id": "E02",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "cinta",
+        "condition": "CINTA_RESUELTA"
+      }
+    ]
+  },
+  {
+    "id": "E03",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "ir",
+        "condition": "MARTA_E03"
+      },
+      {
+        "id": "objetos",
+        "condition": "item.casco_de_operario && item.foto_de_turno && item.informe_de_julian"
+      },
+      {
+        "id": "decidir",
+        "condition": "E03_ELECCION>=1"
+      },
+      {
+        "id": "hueco",
+        "condition": "resolved.g_hueco"
+      }
+    ],
+    "onObjectivesComplete": "e03_circulos"
+  },
+  {
+    "id": "E04",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "puntos",
+        "condition": "E04_PUNTOS>=3"
+      }
+    ],
+    "onObjectivesComplete": "e04_anochecer"
+  },
+  {
+    "id": "E05",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "archivo",
+        "condition": "recruited.lia"
+      },
+      {
+        "id": "erratas",
+        "condition": "resolved.a_erratas"
+      }
+    ],
+    "onObjectivesComplete": "e05_despues"
+  },
+  {
+    "id": "E06",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "paso",
+        "condition": "visited.lira_puerto"
+      },
+      {
+        "id": "entrar",
+        "condition": "cierre.cierre_e06"
+      }
+    ]
+  },
+  {
+    "id": "E07",
+    "act": 1,
+    "objectives": [
+      {
+        "id": "tablillas",
+        "condition": "E07_SIGNOS"
+      },
+      {
+        "id": "decidir",
+        "condition": "cierre.cierre_e07"
+      }
+    ]
+  },
+  {
+    "id": "E08",
+    "act": 2,
+    "objectives": [
+      {
+        "id": "continua",
+        "condition": "money<0"
+      }
+    ]
+  },
+  {
+    "id": "PRUEBAS",
+    "act": 0,
+    "objectives": [
+      {
+        "id": "libre",
+        "condition": "money<0"
+      }
+    ]
+  }
+]

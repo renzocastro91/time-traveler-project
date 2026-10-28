@@ -1,0 +1,29 @@
+{
+  "id": "e04_anochecer",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e04_anochecer.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e04_anochecer.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e04_anochecer.n3",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e04_anochecer.n4",
+      "speakerKey": "char.violeta.name",
+      "actions": [
+        "scene:E05"
+      ]
+    }
+  ]
+}

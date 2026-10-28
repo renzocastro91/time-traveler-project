@@ -1,0 +1,29 @@
+{
+  "id": "insp_arbol",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_arbol.r",
+      "condition": "E04_ARBOL",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_arbol.p",
+      "effects": [
+        {
+          "flag": "E04_ARBOL",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E04_PUNTOS",
+          "op": "Add",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

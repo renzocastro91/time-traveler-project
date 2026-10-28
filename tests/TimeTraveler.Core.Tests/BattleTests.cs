@@ -171,7 +171,9 @@ namespace TimeTraveler.Core.Tests
         public void HuecoGrowsFuriousAndTestimonyCalmsIt()
         {
             var db = TestData.Db;
-            var engine = BattleFactory.Create(db, NewState(), "enc_boss_hueco", new TestData.FixedRandom(0.5f));
+            var state = NewState();
+            foreach (var id in HuecoRule.TestimonyItems) state.Inventory.Add(id);
+            var engine = BattleFactory.Create(db, state, "enc_boss_hueco", new TestData.FixedRandom(0.5f));
             var rule = Assert.IsType<HuecoRule>(engine.Rule);
             var boss = engine.Units.First(u => u.IsBoss);
 
@@ -192,6 +194,33 @@ namespace TimeTraveler.Core.Tests
             Assert.Equal(0, rule.Fury);
             Assert.Equal(1, rule.Testimonies);
             Assert.Equal(hpBefore - boss.MaxHp / 4, boss.Hp);
+        }
+
+        [Fact]
+        public void HuecoCannotFallWithoutThreeTestimonies()
+        {
+            var db = TestData.Db;
+            var state = NewState();
+            state.Inventory.Add(HuecoRule.TestimonyItems[0]); // sólo un objeto
+            var engine = BattleFactory.Create(db, state, "enc_boss_hueco", new TestData.FixedRandom(0.5f));
+            var rule = (HuecoRule)engine.Rule;
+            var boss = engine.Units.First(u => u.IsBoss);
+            boss.Hp = 5;
+            engine.ApplyDamage(engine.Units[0], boss, 999, false, 1f, EffectSpec.BasicAttack(engine.Units[0]));
+            engine.ApplyDamage(engine.Units[0], boss, 999, false, 1f, EffectSpec.BasicAttack(engine.Units[0]));
+            Assert.Equal(1, boss.Hp);
+            Assert.Equal(2, rule.Fury);
+            Assert.True(boss.IsAlive);
+
+            // Con un solo objeto, sólo puede unirse un testimonio.
+            TickUntilReady(engine);
+            var actor = engine.ReadyPlayers[0];
+            Assert.NotEmpty(rule.GetCommands(engine, actor));
+            engine.Submit(BattleAction.Rule(actor, HuecoRule.TestimonyCommand, boss));
+            Assert.Equal(1, rule.Testimonies);
+            Assert.True(boss.IsAlive);
+            TickUntilReady(engine);
+            Assert.Empty(rule.GetCommands(engine, engine.ReadyPlayers[0]));
         }
 
         [Fact]

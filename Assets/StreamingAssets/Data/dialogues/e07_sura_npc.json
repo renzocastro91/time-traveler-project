@@ -1,0 +1,31 @@
+{
+  "id": "e07_sura_npc",
+  "start": "aprender",
+  "nodes": [
+    {
+      "id": "aprender",
+      "textKey": "dlg.e07_sura_npc.aprender",
+      "speakerKey": "char.sura.name",
+      "condition": "current.E07 && !E07_SIGNOS",
+      "actions": [
+        "puzzle:signos"
+      ],
+      "else": "decidir"
+    },
+    {
+      "id": "decidir",
+      "textKey": "dlg.e07_sura_npc.decidir",
+      "speakerKey": "char.sura.name",
+      "condition": "current.E07 && E07_SIGNOS && PACTO_SURA==0",
+      "actions": [
+        "dialogue:e07_bifurcacion"
+      ],
+      "else": "nada"
+    },
+    {
+      "id": "nada",
+      "textKey": "dlg.e07_sura_npc.nada",
+      "speakerKey": "char.sura.name"
+    }
+  ]
+}

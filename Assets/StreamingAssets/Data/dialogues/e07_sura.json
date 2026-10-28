@@ -1,0 +1,58 @@
+{
+  "id": "e07_sura",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e07_sura.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e07_sura.n2",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e07_sura.n3",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e07_sura.n4",
+      "speakerKey": "char.sura.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e07_sura.n5",
+      "speakerKey": "char.violeta.name",
+      "next": "n6"
+    },
+    {
+      "id": "n6",
+      "textKey": "dlg.e07_sura.n6",
+      "speakerKey": "char.sura.name",
+      "next": "n7"
+    },
+    {
+      "id": "n7",
+      "textKey": "dlg.e07_sura.n7",
+      "speakerKey": "char.angel.name",
+      "next": "n8"
+    },
+    {
+      "id": "n8",
+      "textKey": "dlg.e07_sura.n8",
+      "speakerKey": "char.sura.name",
+      "next": "n9"
+    },
+    {
+      "id": "n9",
+      "textKey": "dlg.e07_sura.n9",
+      "actions": [
+        "puzzle:signos"
+      ]
+    }
+  ]
+}

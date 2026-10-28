@@ -51,7 +51,7 @@ namespace TimeTraveler
         {
             var gm = GameManager.Instance;
             if (gm == null || gm.State == null) return;
-            Vector3 leaderPos = Leader != null ? Leader.position : PrototypeWorld.SpawnPoint;
+            Vector3 leaderPos = Leader != null ? Leader.position : Vector3.zero;
             Quaternion leaderRot = Leader != null ? Leader.rotation : Quaternion.identity;
 
             foreach (var v in views.Values) if (v != null) Destroy(v.gameObject);

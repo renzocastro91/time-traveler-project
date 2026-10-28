@@ -1,0 +1,10 @@
+{
+  "id": "e06_confirmado",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e06_confirmado.n1"
+    }
+  ]
+}

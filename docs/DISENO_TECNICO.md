@@ -1,6 +1,6 @@
 # Las Horas que Faltan — Documento de diseño técnico
 
-Versión 0.1 · 28/10/2026 · Fase 1: núcleo jugable + prototipo del Acto I
+Versión 0.2 · 28/10/2026 · Fase 2: Acto I jugable (E01–E07)
 
 Este documento describe **cómo está construido el juego**, no la historia: la historia vive en
 el guion (`Las_horas_que_faltan_Guion_Videojuego.pdf`, fuera del repositorio) y se respeta tal cual.
@@ -37,7 +37,7 @@ Assets/_Project/Scripts/
 │   ├── Progression/ Niveles, experiencia, equipo, inventario, grupo, uso de objetos
 │   ├── Creatures/   Criaturas, Santuario, evolución, Vínculo por Resonancia
 │   ├── Combat/      Motor ATB, fórmulas, IA, combos, reglas dramáticas de jefes
-│   ├── Narrative/   Banderas del guion, condiciones, diálogos
+│   ├── Narrative/   Banderas, condiciones, diálogos, escenas y objetivos, Cierres, puzzles, acciones
 │   └── Save/        Estado de partida y guardado
 ├── Runtime/     (TimeTraveler.Runtime — capa Unity)
 │   ├── Bootstrap/   GameManager: arranque, modos de juego, acciones de diálogo
@@ -45,20 +45,23 @@ Assets/_Project/Scripts/
 │   ├── Exploration/ Jugador, grupo en fila, cámara, interactuables, enemigos visibles
 │   ├── Battle/      BattleController: combate sobre el mapa, menús, animación de eventos
 │   ├── Resonance/   Minijuego de vínculo
+│   ├── Puzzles/     Cinta (E02) y alfabeto acústico (E07)
 │   ├── UI/          Kit de interfaz, HUD, diálogos, menú de pausa, título
-│   └── World/       Modelos provisionales y mapa de prueba
+│   └── World/       WorldBuilder (construye mapas desde datos) y modelos provisionales
 └── Editor/      Menú «Time Traveler › Validar datos y textos»
 tests/TimeTraveler.Core.Tests/   Pruebas xUnit del Core (se ejecutan sin Unity)
+tools/content/                   Generadores de contenido (JSON de datos y textos)
 ```
 
 **Regla de oro:** toda decisión de reglas (daño, quién actúa, si una criatura acepta, qué cambia
 una elección) vive en `Core`. Unity sólo **muestra** y **pide órdenes**. Así:
-- el combate y la progresión se prueban automáticamente (`dotnet test`, 32 pruebas);
+- el combate, la progresión y **el Acto I completo** se prueban automáticamente (`dotnet test`, 40 pruebas);
 - cambiar el arte o la interfaz nunca rompe las reglas;
 - el equilibrio se ajusta en datos y en `DamageCalculator`, en un solo lugar.
 
 ### Flujo de modos (`GameManager.Mode`)
-`Title → Exploration ⇄ Dialogue / Menu / Battle / Resonance`, y `GameOver` tras una derrota.
+`Title → Exploration ⇄ Dialogue / Menu / Battle / Resonance / Story`, y `GameOver` tras una derrota.
+`Story` cubre puzzles, la ficha de Cierre, los viajes con fundido y el cartel de fin de acto.
 Cada modo bloquea la entrada de los demás; el frame en que cambia el modo se ignora para que una
 misma pulsación no haga dos cosas.
 
@@ -134,7 +137,7 @@ función dramática y una orden **Especial**. Implementado en `Core/Combat/Rules
 
 | Jefe | Regla | Orden especial |
 |---|---|---|
-| **El Hueco** (E03) | Cada golpe aumenta su Furia (+15 % de daño, máx. 5) | *Testimonio* (con Furia ≥ 2): calma la Furia y le quita el 25 % de la vida ignorando defensas |
+| **El Hueco** (E03) | Cada golpe aumenta su Furia (+15 % de daño, máx. 5). **No cae hasta unir los tres objetos de la galería** («no se lo derrota golpeando») | *Testimonio* (con Furia ≥ 2 y un objeto aún sin unir): calma la Furia y le quita el 25 % de la vida ignorando defensas |
 | **La Fe de Erratas** (E05) | Inmune mientras su Expediente esté activo | *Testimonio no registrado* (Lía o quien lleve la ficha de Gabriel Mora): lo anula durante 3 de sus turnos |
 
 Para agregar un jefe: crear una clase que herede de `DramaticRuleBase`, registrarla en
@@ -207,7 +210,32 @@ enseña las técnicas nuevas. Es siempre una decisión del jugador (nunca autom�
 - **Condiciones**: `CONFIANZA_VA>=2 && !PACTO_SURA || item.ficha_gabriel` (se admiten `money`,
   `recruited.x` y `scene.E05`).
 - El **Cuaderno de Costuras** del menú muestra las huellas de las decisiones.
-- Escenas implementadas como diálogo: E01, E02 y E03 (líneas tomadas del guion).
+- **Escenas y objetivos** (`scenes.json`): cada escena del guion tiene objetivos con condición;
+  el HUD muestra el primero sin cumplir. Al cumplirlos todos se reproduce su diálogo automático.
+- **Acciones** (`Core/Narrative/StoryActions.cs`): `give`, `take`, `money`, `recruit`, `scene`,
+  `absent`, `heal`, `nudo`, `resolve` se resuelven en Core; `travel`, `battle`, `puzzle`, `cierre`,
+  `dialogue` y `endact` se encolan y Unity las ejecuta en orden al terminar el diálogo.
+- **Cierres** (`cierres.json`, guion 1.1 y 7.3): al llegar a la decisión de un Nudo se toma una
+  instantánea (`nudo:id`). La ficha **ANTES / AHORA** muestra la causa, el lugar antes y ahora y
+  una frase humana; **Reconsiderar** deshace banderas y objetos y repite la decisión; **Confirmar**
+  la fija en la Hebra y avanza la escena. El Cuaderno conserva todas las fichas.
+- **Fichas de ausentes** (`absents.json`): Gabriel Mora es la primera (E02).
+- **Viaje entre Nudos**: con el Diapasón, los puntos de Nudo listan los Nudos ya visitados.
+
+### 6.1 Recorrido del Acto I (E01–E07)
+
+| Escena | Mapa | Jugabilidad | Decisión / consecuencia |
+|---|---|---|---|
+| E01 El aula vacía | Instituto (2000) | Examinar 5 objetos; la maqueta esconde el **plano oculto** | Leer el cuaderno con o sin permiso (CONFIANZA_VA) |
+| E02 Una voz gastada | Instituto | **Puzzle de la cinta**: 3 recuerdos contradictorios → la señal que comparten | Conservar la ficha de Gabriel (ausentes) |
+| E03 La madre en la compuerta | Estación + Galería (2000) | Marta, 3 objetos‑testimonio, Huecos y **jefe El Hueco** | Nóminas / compuerta / **ambas sólo con el plano** |
+| E04 La calle que nos sucede | Puerto Niebla (2026) | Vista **ANTES/AHORA** (Q / LB): 3 puntos persistentes | — |
+| E05 El archivo de los que no fueron | Archivo Judicial (2026) | Reclutar a Lía; **jefe Fe de Erratas** | Publicar de golpe / contrastar con las familias |
+| E06 Un tren hacia 330 a. C. | Paso subterráneo → Lira | Primer viaje; los guardias de Lira | **Cierre**: teléfono a la guardia (museo) / a un mercader (mercado clandestino) / historia falsa |
+| E07 El primer trato | Casa de las Tablillas (330 a. C.) | **Alfabeto acústico** de Sura | **Cierre**: ocultar / publicar el censo / robar la piedra (Sura no se une); Diapasón; fin del acto |
+
+El modo **Pruebas** (desde el título) abre el *Nudo de pruebas* con el grupo a nivel 8, todos los
+encuentros, 13 criaturas de distintas épocas y equipo para probar sin jugar la historia.
 
 ---
 
@@ -254,11 +282,20 @@ lo usa (E06: «los guardias no entienden la ropa de los visitantes»).
 | Un personaje, técnica, objeto, criatura o enemigo | `StreamingAssets/Data/*.json` | textos en `Localization/es.json` |
 | Un combate | `encounters.json` (+ `dramaticRule` si es jefe) | colocar un `MapEnemy` con ese id |
 | Una escena con diálogo | `Data/dialogues/<id>.json` | textos `dlg.<id>.<nodo>` en `es.json` |
+| Un mapa | `Data/maps/<id>.json` (bloques, PNJ, cofres, enemigos, criaturas, salidas, zonas, Nudos) | condiciones con la sintaxis de los diálogos |
+| Una escena del guion con objetivos | `scenes.json` | textos `scene.<id>.title` y `scene.<id>.obj.<objetivo>` |
+| Un Cierre | `cierres.json` + acción `cierre:<id>` en el diálogo de la decisión | textos `cierre.<id>.*` |
 | Un jefe con regla nueva | clase en `Core/Combat/Rules` | registrarla en `DramaticRuleRegistry` |
 | Traducir | copiar `es.json` como `en.json` y traducir | se elige en *Opciones › Idioma* |
 
 Siempre: **Time Traveler › Validar datos y textos** en Unity, o `dotnet test`. Las pruebas fallan
-si hay referencias rotas o textos faltantes.
+si hay referencias rotas, condiciones con variables inexistentes, acciones desconocidas, mapas
+inalcanzables o textos faltantes.
+
+**Generadores** (`tools/content/`): el contenido actual se escribió con `gen_data.py` (sistemas) y
+`gen_act1.py` (Acto I). Para cambios grandes conviene editar los generadores y ejecutar
+`python tools/content/gen_data.py .`, que reescribe los JSON. Si se retoca un JSON a mano, hay que
+llevar el cambio también al generador (o dejar de usarlo) para no perderlo en la próxima generación.
 
 ---
 
@@ -266,9 +303,9 @@ si hay referencias rotas o textos faltantes.
 
 1. **Fase 1 (esta entrega):** núcleo de sistemas, mapa de prueba con los dos jefes del Acto I,
    menús completos, mando, guardado.
-2. **Fase 2 — Acto I jugable (E01–E07):** escenas reales (instituto, estación, 2026, Lira), puzzles
-   (cinta E02, Hueco E03), mapa ANTES/AHORA, reclutamiento de Sura, Diapasón real en E07,
-   sistema de Cierre y ficha de ausentes.
+2. **Fase 2 — Acto I jugable (E01–E07):** ✔ mapas por datos, escenas y objetivos, puzzles de la
+   cinta y del alfabeto, Hueco con testimonios, vista ANTES/AHORA, Cierres con reconsideración,
+   fichas de ausentes, Sura y Diapasón, viaje entre Nudos, modo de pruebas.
 3. **Fase 3 — arte y sonido:** URP, modelos 3D, animaciones, efectos de técnicas, música
    (motivo de tres notas original), retratos para diálogos, migración de la interfaz a prefabs.
 4. **Fases 4–7:** Actos II–V, misiones M01–M14, los 16 finales, Nueva Hebra+.

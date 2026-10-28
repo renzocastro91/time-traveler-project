@@ -1,0 +1,10 @@
+{
+  "id": "insp_edicto",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.insp_edicto.n1"
+    }
+  ]
+}

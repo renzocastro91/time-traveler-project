@@ -61,6 +61,32 @@ namespace TimeTraveler.Core
             return false;
         }
 
+        /// <summary>Todos los identificadores que usa una condición (para validar datos).</summary>
+        public static List<string> Identifiers(string condition)
+        {
+            var result = new List<string>();
+            if (string.IsNullOrWhiteSpace(condition)) return result;
+            foreach (string orPart in condition.Split(new[] { "||" }, StringSplitOptions.None))
+            {
+                foreach (string andPart in orPart.Split(new[] { "&&" }, StringSplitOptions.None))
+                {
+                    string term = andPart.Trim();
+                    if (term.Length == 0) throw new FormatException("Condición vacía");
+                    string name = term.TrimStart('!').Trim();
+                    foreach (string op in Operators)
+                    {
+                        int index = term.IndexOf(op, StringComparison.Ordinal);
+                        if (index <= 0) continue;
+                        name = term.Substring(0, index).Trim();
+                        int.Parse(term.Substring(index + op.Length).Trim());
+                        break;
+                    }
+                    result.Add(name);
+                }
+            }
+            return result;
+        }
+
         private static bool EvaluateTerm(string term, Func<string, int> resolve)
         {
             if (term.Length == 0) throw new FormatException("Condición vacía");
@@ -144,7 +170,7 @@ namespace TimeTraveler.Core
                 Current = dialogue.Find(nodeId);
                 if (Current == null) return;
                 if (ConditionEvaluator.Evaluate(Current.Condition, state.ResolveVariable)) break;
-                nodeId = Current.Next;
+                nodeId = Current.Else ?? Current.Next;
             }
             state.Flags.Apply(Current.Effects, db);
             foreach (string action in Current.Actions)

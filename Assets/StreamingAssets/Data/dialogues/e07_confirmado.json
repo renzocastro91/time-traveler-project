@@ -1,0 +1,42 @@
+{
+  "id": "e07_confirmado",
+  "start": "une",
+  "nodes": [
+    {
+      "id": "une",
+      "textKey": "dlg.e07_confirmado.une",
+      "speakerKey": "char.sura.name",
+      "next": "corte",
+      "condition": "PACTO_SURA<=2",
+      "actions": [
+        "recruit:sura:6"
+      ],
+      "else": "no"
+    },
+    {
+      "id": "no",
+      "textKey": "dlg.e07_confirmado.no",
+      "next": "corte"
+    },
+    {
+      "id": "corte",
+      "textKey": "dlg.e07_confirmado.corte",
+      "next": "torre",
+      "condition": "PACTO_SURA<=2",
+      "else": "torre"
+    },
+    {
+      "id": "torre",
+      "textKey": "dlg.e07_confirmado.torre",
+      "next": "custodia"
+    },
+    {
+      "id": "custodia",
+      "textKey": "dlg.e07_confirmado.custodia",
+      "speakerKey": "npc.custodia.name",
+      "actions": [
+        "endact:1"
+      ]
+    }
+  ]
+}

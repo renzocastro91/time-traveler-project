@@ -1,0 +1,29 @@
+{
+  "id": "insp_album",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_album.r",
+      "condition": "INSP_ALBUM",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_album.p",
+      "effects": [
+        {
+          "flag": "INSP_ALBUM",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E01_INSPECCIONES",
+          "op": "Add",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

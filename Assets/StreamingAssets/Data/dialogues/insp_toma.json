@@ -1,0 +1,29 @@
+{
+  "id": "insp_toma",
+  "start": "r",
+  "nodes": [
+    {
+      "id": "r",
+      "textKey": "dlg.insp_toma.r",
+      "condition": "E04_TOMA",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_toma.p",
+      "effects": [
+        {
+          "flag": "E04_TOMA",
+          "op": "Set",
+          "value": 1
+        },
+        {
+          "flag": "E04_PUNTOS",
+          "op": "Add",
+          "value": 1
+        }
+      ],
+      "actions": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "lira_guardia",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.lira_guardia.n1",
+      "speakerKey": "npc.guardia_lira.name"
+    }
+  ]
+}

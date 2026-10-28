@@ -68,10 +68,11 @@ namespace TimeTraveler.Core
     }
 
     /// <summary>
-    /// E03 · El Hueco — "Atacarlo lo vuelve más violento".
+    /// E03 · El Hueco — "Atacarlo lo vuelve más violento"; "no se lo derrota golpeando: el jugador une
+    /// tres objetos con sus testimonios para estabilizar el lugar".
     /// Cada golpe que recibe aumenta su Furia (+15 % de daño por punto, máx. 5). La orden «Testimonio»
-    /// (disponible con Furia 2 o más) une un objeto con su recuerdo: calma la Furia y le inflige
-    /// un 25 % de su vida máxima ignorando defensas. Se puede ganar a golpes, pero cuesta caro.
+    /// (con Furia 2 o más y un objeto de la galería aún sin unir) calma la Furia y le inflige un 25 %
+    /// de su vida máxima ignorando defensas. No cae hasta haber unido los tres objetos.
     /// </summary>
     public sealed class HuecoRule : DramaticRuleBase
     {
@@ -79,6 +80,9 @@ namespace TimeTraveler.Core
         public const string TestimonyCommand = "testimonio";
         public const int MaxFury = 5;
         public const int FuryForTestimony = 2;
+        public const int RequiredTestimonies = 3;
+        /// <summary>Objetos de la galería de E03 que pueden unirse a un testimonio.</summary>
+        public static readonly string[] TestimonyItems = { "casco_de_operario", "foto_de_turno", "informe_de_julian" };
 
         public int Fury { get; private set; }
         public int Testimonies { get; private set; }
@@ -104,7 +108,8 @@ namespace TimeTraveler.Core
 
         public override IEnumerable<RuleCommand> GetCommands(BattleEngine engine, BattleUnit actor)
         {
-            if (actor.Kind == UnitKind.Humano && Boss != null && Boss.IsAlive && Fury >= FuryForTestimony)
+            int objects = TestimonyItems.Count(id => engine.Inventory.Count(id) > 0);
+            if (actor.Kind == UnitKind.Humano && Boss != null && Boss.IsAlive && Fury >= FuryForTestimony && Testimonies < objects)
                 yield return new RuleCommand { Id = TestimonyCommand, NameKey = "rule.hueco.cmd.name", DescKey = "rule.hueco.cmd.desc", TargetsEnemy = false };
         }
 
@@ -116,6 +121,13 @@ namespace TimeTraveler.Core
             Boss.OutgoingDamageMultiplier = 1f;
             engine.EmitMessage("rule.hueco.testimony", Testimonies);
             engine.ApplyDamage(actor, Boss, Math.Max(1, Boss.MaxHp / 4), false, 1f, null);
+        }
+
+        public override bool CanDie(BattleEngine engine, BattleUnit unit)
+        {
+            if (unit != Boss || Testimonies >= RequiredTestimonies) return true;
+            engine.EmitMessage("rule.hueco.unstable", RequiredTestimonies - Testimonies);
+            return false;
         }
     }
 

@@ -1,0 +1,40 @@
+{
+  "id": "e04_transeunte",
+  "start": "n0",
+  "nodes": [
+    {
+      "id": "n0",
+      "textKey": "dlg.e04_transeunte.n0",
+      "condition": "!current.E04",
+      "else": "n1"
+    },
+    {
+      "id": "n1",
+      "textKey": "dlg.e04_transeunte.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e04_transeunte.n2",
+      "speakerKey": "char.violeta.name",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e04_transeunte.n3",
+      "speakerKey": "npc.anciana.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e04_transeunte.n4",
+      "speakerKey": "char.angel.name",
+      "next": "n5"
+    },
+    {
+      "id": "n5",
+      "textKey": "dlg.e04_transeunte.n5",
+      "speakerKey": "npc.anciana.name"
+    }
+  ]
+}

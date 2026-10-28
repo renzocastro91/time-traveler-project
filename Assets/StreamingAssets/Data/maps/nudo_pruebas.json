@@ -1,0 +1,326 @@
+{
+  "id": "nudo_pruebas",
+  "era": "orillas",
+  "size": [
+    70,
+    70
+  ],
+  "floorColor": "#4a3e5a",
+  "skyColor": "#141020",
+  "spawns": {
+    "default": [
+      0,
+      -28,
+      0
+    ]
+  },
+  "blocks": [
+    {
+      "pos": [
+        0,
+        1.6,
+        35.0
+      ],
+      "size": [
+        70,
+        3.2,
+        1
+      ],
+      "color": "#5a4e6a"
+    },
+    {
+      "pos": [
+        0,
+        1.6,
+        -35.0
+      ],
+      "size": [
+        70,
+        3.2,
+        1
+      ],
+      "color": "#5a4e6a"
+    },
+    {
+      "pos": [
+        35.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        70
+      ],
+      "color": "#5a4e6a"
+    },
+    {
+      "pos": [
+        -35.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        70
+      ],
+      "color": "#5a4e6a"
+    }
+  ],
+  "npcs": [
+    {
+      "id": "vendedor",
+      "pos": [
+        -6,
+        -24
+      ],
+      "dialogue": "vendedor_reloj",
+      "model": "person",
+      "color": "#8a7a50",
+      "rotation": 180
+    }
+  ],
+  "chests": [
+    {
+      "id": "p_cofre_1",
+      "pos": [
+        -10,
+        -20
+      ],
+      "itemId": "cable_trenzado",
+      "quantity": 1
+    },
+    {
+      "id": "p_cofre_2",
+      "pos": [
+        10,
+        -20
+      ],
+      "itemId": "espada_de_bronce",
+      "quantity": 1
+    },
+    {
+      "id": "p_cofre_3",
+      "pos": [
+        14,
+        -24
+      ],
+      "itemId": "malla_ligera",
+      "quantity": 1
+    },
+    {
+      "id": "p_cofre_4",
+      "pos": [
+        -14,
+        -24
+      ],
+      "itemId": "botiquin",
+      "quantity": 5
+    }
+  ],
+  "enemies": [
+    {
+      "id": "p_huecos",
+      "pos": [
+        -20,
+        -5
+      ],
+      "encounter": "enc_estacion_huecos",
+      "respawns": true
+    },
+    {
+      "id": "p_mixto",
+      "pos": [
+        -26,
+        5
+      ],
+      "encounter": "enc_estacion_mixto",
+      "respawns": true
+    },
+    {
+      "id": "p_hueco",
+      "pos": [
+        -24,
+        18
+      ],
+      "encounter": "enc_boss_hueco",
+      "respawns": true
+    },
+    {
+      "id": "p_drones",
+      "pos": [
+        20,
+        -5
+      ],
+      "encounter": "enc_2026_drones",
+      "respawns": true
+    },
+    {
+      "id": "p_archivo",
+      "pos": [
+        26,
+        5
+      ],
+      "encounter": "enc_2026_archivo",
+      "respawns": true
+    },
+    {
+      "id": "p_erratas",
+      "pos": [
+        24,
+        18
+      ],
+      "encounter": "enc_boss_erratas",
+      "respawns": true
+    },
+    {
+      "id": "p_sellados",
+      "pos": [
+        0,
+        26
+      ],
+      "encounter": "enc_lira_sellados",
+      "respawns": true
+    },
+    {
+      "id": "p_jabali",
+      "pos": [
+        8,
+        30
+      ],
+      "encounter": "enc_lira_jabali",
+      "respawns": true
+    }
+  ],
+  "wild": [
+    {
+      "id": "p_wild_0",
+      "pos": [
+        -8,
+        0
+      ],
+      "species": "tropel",
+      "level": 4
+    },
+    {
+      "id": "p_wild_1",
+      "pos": [
+        8,
+        0
+      ],
+      "species": "galapago_olivar",
+      "level": 5
+    },
+    {
+      "id": "p_wild_2",
+      "pos": [
+        -6,
+        8
+      ],
+      "species": "nutrilla",
+      "level": 5
+    },
+    {
+      "id": "p_wild_3",
+      "pos": [
+        6,
+        8
+      ],
+      "species": "ascuela",
+      "level": 5
+    },
+    {
+      "id": "p_wild_4",
+      "pos": [
+        -10,
+        14
+      ],
+      "species": "grillo_de_laton",
+      "level": 5
+    },
+    {
+      "id": "p_wild_5",
+      "pos": [
+        10,
+        14
+      ],
+      "species": "pipistrelo",
+      "level": 6
+    },
+    {
+      "id": "p_wild_6",
+      "pos": [
+        0,
+        12
+      ],
+      "species": "lumedusa",
+      "level": 6
+    },
+    {
+      "id": "p_wild_7",
+      "pos": [
+        -14,
+        6
+      ],
+      "species": "pichon_de_fragata",
+      "level": 8
+    },
+    {
+      "id": "p_wild_8",
+      "pos": [
+        14,
+        6
+      ],
+      "species": "pinzaro",
+      "level": 8
+    },
+    {
+      "id": "p_wild_9",
+      "pos": [
+        0,
+        18
+      ],
+      "species": "escaralambre",
+      "level": 9
+    },
+    {
+      "id": "p_wild_10",
+      "pos": [
+        -4,
+        20
+      ],
+      "species": "nictela",
+      "level": 9
+    },
+    {
+      "id": "p_wild_11",
+      "pos": [
+        4,
+        20
+      ],
+      "species": "promesin",
+      "level": 10
+    },
+    {
+      "id": "p_wild_12",
+      "pos": [
+        0,
+        4
+      ],
+      "species": "cria_emplumada",
+      "level": 1
+    }
+  ],
+  "exits": [],
+  "triggers": [],
+  "savePoints": [
+    {
+      "pos": [
+        0,
+        -22
+      ]
+    }
+  ],
+  "nudoPoints": []
+}

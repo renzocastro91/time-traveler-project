@@ -1,0 +1,30 @@
+{
+  "id": "e02_magnetofono",
+  "start": "hecho",
+  "nodes": [
+    {
+      "id": "hecho",
+      "textKey": "dlg.e02_magnetofono.hecho",
+      "condition": "CINTA_RESUELTA",
+      "else": "visto"
+    },
+    {
+      "id": "visto",
+      "textKey": "dlg.e02_magnetofono.visto",
+      "condition": "current.E02",
+      "else": "nada",
+      "next": "ajuste_corto"
+    },
+    {
+      "id": "ajuste_corto",
+      "textKey": "dlg.e02_magnetofono.ajuste_corto",
+      "actions": [
+        "puzzle:cinta"
+      ]
+    },
+    {
+      "id": "nada",
+      "textKey": "dlg.e02_magnetofono.nada"
+    }
+  ]
+}

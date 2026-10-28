@@ -1,0 +1,135 @@
+{
+  "id": "paso_2026",
+  "era": "2026",
+  "size": [
+    20,
+    32
+  ],
+  "floorColor": "#3a3630",
+  "skyColor": "#08080a",
+  "spawns": {
+    "default": [
+      0,
+      -13,
+      0
+    ],
+    "nudo": [
+      0,
+      12,
+      180
+    ]
+  },
+  "blocks": [
+    {
+      "pos": [
+        0,
+        1.6,
+        16.0
+      ],
+      "size": [
+        20,
+        3.2,
+        1
+      ],
+      "color": "#4e4a40"
+    },
+    {
+      "pos": [
+        0,
+        1.6,
+        -16.0
+      ],
+      "size": [
+        20,
+        3.2,
+        1
+      ],
+      "color": "#4e4a40"
+    },
+    {
+      "pos": [
+        10.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        32
+      ],
+      "color": "#4e4a40"
+    },
+    {
+      "pos": [
+        -10.0,
+        1.6,
+        0
+      ],
+      "size": [
+        1,
+        3.2,
+        32
+      ],
+      "color": "#4e4a40"
+    },
+    {
+      "pos": [
+        0,
+        0.75,
+        4
+      ],
+      "size": [
+        3,
+        1.5,
+        2
+      ],
+      "color": "#8a8270"
+    }
+  ],
+  "npcs": [],
+  "chests": [],
+  "enemies": [],
+  "wild": [],
+  "exits": [
+    {
+      "pos": [
+        0,
+        -15
+      ],
+      "size": [
+        3,
+        3
+      ],
+      "toMap": "calle_2026",
+      "toSpawn": "desde_paso"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "t_e06_paso",
+      "pos": [
+        0,
+        1
+      ],
+      "size": [
+        18,
+        4
+      ],
+      "dialogue": "e06_paso",
+      "once": true,
+      "condition": "current.E06"
+    }
+  ],
+  "savePoints": [],
+  "nudoPoints": [
+    {
+      "pos": [
+        0,
+        13
+      ],
+      "condition": "item.diapason_de_arcilla"
+    }
+  ],
+  "isNudo": true,
+  "nudoCondition": "item.diapason_de_arcilla"
+}

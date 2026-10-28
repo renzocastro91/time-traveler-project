@@ -1,0 +1,19 @@
+{
+  "id": "insp_foto",
+  "start": "ya",
+  "nodes": [
+    {
+      "id": "ya",
+      "textKey": "dlg.insp_foto.ya",
+      "condition": "item.foto_de_turno",
+      "else": "p"
+    },
+    {
+      "id": "p",
+      "textKey": "dlg.insp_foto.p",
+      "actions": [
+        "give:foto_de_turno:1"
+      ]
+    }
+  ]
+}
