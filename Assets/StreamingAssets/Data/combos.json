@@ -1,0 +1,267 @@
+[
+  {
+    "id": "estatica_del_aula",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_eco"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_pulso"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Rayo",
+    "power": 30,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "tajo_vendaval",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_latigazo"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_tajo"
+      }
+    ],
+    "kind": "Fisica",
+    "element": "Viento",
+    "power": 34,
+    "target": "EnemigoArea",
+    "areaRadius": 3.0
+  },
+  {
+    "id": "rebobinado_doble",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_rebobinar"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_escudo_chatarra"
+      }
+    ],
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "power": 26,
+    "target": "AliadosTodos",
+    "healing": true
+  },
+  {
+    "id": "cancion_de_la_tierra",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_eco"
+      },
+      {
+        "actor": "sura",
+        "techniqueId": "s_vibracion"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Tierra",
+    "power": 34,
+    "target": "EnemigosTodos",
+    "applyStatus": "Aturdido",
+    "statusChance": 0.25,
+    "statusDuration": 1
+  },
+  {
+    "id": "imprenta_de_chispas",
+    "participants": [
+      {
+        "actor": "angel",
+        "techniqueId": "a_pulso"
+      },
+      {
+        "actor": "teo",
+        "techniqueId": "t_tinta_ardiente"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Fuego",
+    "power": 36,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "cortocircuito_de_archivo",
+    "participants": [
+      {
+        "actor": "angel",
+        "techniqueId": "a_chispazo"
+      },
+      {
+        "actor": "lia",
+        "techniqueId": "l_destello"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Luz",
+    "power": 40,
+    "target": "EnemigosTodos",
+    "applyStatus": "Ceguera",
+    "statusChance": 0.3,
+    "statusDuration": 2
+  },
+  {
+    "id": "cinta_luminosa",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_rebobinar"
+      },
+      {
+        "actor": "lia",
+        "techniqueId": "l_luz_de_archivo"
+      }
+    ],
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "power": 34,
+    "target": "AliadosTodos",
+    "healing": true
+  },
+  {
+    "id": "marea_viva",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_vendaval"
+      },
+      {
+        "actor": "anouk",
+        "techniqueId": "n_marea"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Agua",
+    "power": 40,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "carga_conjunta",
+    "participants": [
+      {
+        "actor": "angel",
+        "techniqueId": "a_tajo"
+      },
+      {
+        "actor": "mascota"
+      }
+    ],
+    "kind": "Fisica",
+    "element": "Neutro",
+    "power": 30,
+    "target": "EnemigoUno",
+    "petMpCost": 2
+  },
+  {
+    "id": "ventisca_companera",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_eco"
+      },
+      {
+        "actor": "mascota",
+        "petElement": "Viento"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Viento",
+    "power": 34,
+    "target": "EnemigosTodos",
+    "petMpCost": 3
+  },
+  {
+    "id": "rayo_guia",
+    "participants": [
+      {
+        "actor": "angel",
+        "techniqueId": "a_pulso"
+      },
+      {
+        "actor": "mascota",
+        "petElement": "Rayo"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Rayo",
+    "power": 36,
+    "target": "EnemigoArea",
+    "areaRadius": 3.0,
+    "petMpCost": 3
+  },
+  {
+    "id": "testimonio_compartido",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_eco"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_pulso"
+      },
+      {
+        "actor": "lia",
+        "techniqueId": "l_destello"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Luz",
+    "power": 60,
+    "target": "EnemigosTodos",
+    "applyStatus": "Silencio",
+    "statusChance": 0.4,
+    "statusDuration": 3
+  },
+  {
+    "id": "primer_trato",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_vendaval"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_chispazo"
+      },
+      {
+        "actor": "sura",
+        "techniqueId": "s_sismo"
+      }
+    ],
+    "kind": "Magica",
+    "element": "Tierra",
+    "power": 70,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "las_horas_que_faltan",
+    "participants": [
+      {
+        "actor": "violeta",
+        "techniqueId": "v_contrapunto"
+      },
+      {
+        "actor": "angel",
+        "techniqueId": "a_sobrecarga"
+      },
+      {
+        "actor": "mascota"
+      }
+    ],
+    "kind": "Fisica",
+    "element": "Vacio",
+    "power": 90,
+    "target": "EnemigosTodos",
+    "petMpCost": 6
+  }
+]

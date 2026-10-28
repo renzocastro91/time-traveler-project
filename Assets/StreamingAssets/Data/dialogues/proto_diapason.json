@@ -1,0 +1,23 @@
+{
+  "id": "proto_diapason",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.proto_diapason.n1",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.proto_diapason.n2",
+      "speakerKey": "char.violeta.name",
+      "actions": [
+        "give:diapason_de_arcilla:1",
+        "give:bizcocho:3",
+        "give:pescado_seco:2",
+        "give:collar_de_cuero:1",
+        "give:manta_acolchada:1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "proto_vendedor",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.proto_vendedor.n1",
+      "speakerKey": "npc.vendedor.name",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.proto_vendedor.n2",
+      "choices": [
+        {
+          "textKey": "dlg.proto_vendedor.n2.c0",
+          "next": "n3",
+          "effects": [],
+          "condition": "money>=600"
+        },
+        {
+          "textKey": "dlg.proto_vendedor.n2.c1",
+          "next": "n4",
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.proto_vendedor.n3",
+      "speakerKey": "npc.vendedor.name",
+      "actions": [
+        "money:-600",
+        "give:reloj_sin_agujas:1"
+      ]
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.proto_vendedor.n4",
+      "speakerKey": "npc.vendedor.name"
+    }
+  ]
+}

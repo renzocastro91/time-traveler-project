@@ -1,0 +1,807 @@
+[
+  {
+    "id": "v_latigazo",
+    "kind": "Fisica",
+    "element": "Viento",
+    "mpCost": 2,
+    "power": 15,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "v_eco",
+    "kind": "Magica",
+    "element": "Viento",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "v_rebobinar",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 4,
+    "power": 18,
+    "target": "AliadoUno",
+    "healing": true
+  },
+  {
+    "id": "v_vendaval",
+    "kind": "Magica",
+    "element": "Viento",
+    "mpCost": 7,
+    "power": 13,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "v_nota_sostenida",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 0,
+    "target": "AliadoUno",
+    "applyStatus": "Prisa",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "v_contrapunto",
+    "kind": "Fisica",
+    "element": "Viento",
+    "mpCost": 6,
+    "power": 24,
+    "target": "EnemigoArea",
+    "areaRadius": 2.5
+  },
+  {
+    "id": "v_cancion_inversa",
+    "kind": "Magica",
+    "element": "Viento",
+    "mpCost": 14,
+    "power": 30,
+    "target": "EnemigosTodos",
+    "applyStatus": "Confusion",
+    "statusChance": 0.25,
+    "statusDuration": 2
+  },
+  {
+    "id": "a_tajo",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 16,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "a_pulso",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 3,
+    "power": 13,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "a_corte_cruzado",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 18,
+    "target": "EnemigoArea",
+    "areaRadius": 2.5
+  },
+  {
+    "id": "a_chispazo",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 7,
+    "power": 13,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "a_escudo_chatarra",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 0,
+    "target": "AliadoUno",
+    "applyStatus": "Proteccion",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "a_sobrecarga",
+    "kind": "Fisica",
+    "element": "Rayo",
+    "mpCost": 9,
+    "power": 32,
+    "target": "EnemigoUno",
+    "applyStatus": "Aturdido",
+    "statusChance": 0.3,
+    "statusDuration": 1
+  },
+  {
+    "id": "a_tormenta_de_antena",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 15,
+    "power": 30,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "s_tablilla",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 13,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "s_vibracion",
+    "kind": "Magica",
+    "element": "Tierra",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno",
+    "applyStatus": "Aturdido",
+    "statusChance": 0.2,
+    "statusDuration": 1
+  },
+  {
+    "id": "s_escudo_pacto",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 8,
+    "power": 0,
+    "target": "AliadosTodos",
+    "applyStatus": "Coraza",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "s_sismo",
+    "kind": "Magica",
+    "element": "Tierra",
+    "mpCost": 8,
+    "power": 16,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "s_nombre_devuelto",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 10,
+    "power": 0,
+    "target": "AliadoUno",
+    "revive": 0.3
+  },
+  {
+    "id": "s_alfabeto_barro",
+    "kind": "Magica",
+    "element": "Tierra",
+    "mpCost": 10,
+    "power": 30,
+    "target": "EnemigoUno",
+    "applyStatus": "Lentitud",
+    "statusChance": 0.5,
+    "statusDuration": 3
+  },
+  {
+    "id": "t_martillazo",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 17,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "t_tinta_ardiente",
+    "kind": "Magica",
+    "element": "Fuego",
+    "mpCost": 3,
+    "power": 13,
+    "target": "EnemigoUno",
+    "applyStatus": "Veneno",
+    "statusChance": 0.3,
+    "statusDuration": 3
+  },
+  {
+    "id": "t_plancha_caliente",
+    "kind": "Fisica",
+    "element": "Fuego",
+    "mpCost": 6,
+    "power": 20,
+    "target": "EnemigoArea",
+    "areaRadius": 2.5
+  },
+  {
+    "id": "t_llamarada_prensa",
+    "kind": "Magica",
+    "element": "Fuego",
+    "mpCost": 8,
+    "power": 16,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "t_eco_mecanico",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 6,
+    "power": 0,
+    "target": "AliadoUno",
+    "applyStatus": "Prisa",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "t_edicion_extra",
+    "kind": "Fisica",
+    "element": "Fuego",
+    "mpCost": 11,
+    "power": 34,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "l_carpetazo",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 1,
+    "power": 11,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "l_destello",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 3,
+    "power": 12,
+    "target": "EnemigoUno",
+    "applyStatus": "Ceguera",
+    "statusChance": 0.35,
+    "statusDuration": 3
+  },
+  {
+    "id": "l_auditoria",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 4,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Silencio",
+    "statusChance": 0.6,
+    "statusDuration": 3
+  },
+  {
+    "id": "l_luz_de_archivo",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 8,
+    "power": 14,
+    "target": "AliadosTodos",
+    "healing": true
+  },
+  {
+    "id": "l_foco",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 7,
+    "power": 15,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "l_sentencia_clara",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 12,
+    "power": 32,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "n_incision",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 14,
+    "target": "EnemigoUno",
+    "applyStatus": "Veneno",
+    "statusChance": 0.25,
+    "statusDuration": 3
+  },
+  {
+    "id": "n_marea",
+    "kind": "Magica",
+    "element": "Agua",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "n_sutura",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 4,
+    "power": 24,
+    "target": "AliadoUno",
+    "healing": true
+  },
+  {
+    "id": "n_triaje",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 9,
+    "power": 16,
+    "target": "AliadosTodos",
+    "healing": true,
+    "cureStatuses": [
+      "Veneno",
+      "Ceguera"
+    ]
+  },
+  {
+    "id": "n_sedante",
+    "kind": "Magica",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Sueno",
+    "statusChance": 0.5,
+    "statusDuration": 3
+  },
+  {
+    "id": "n_diluvio",
+    "kind": "Magica",
+    "element": "Agua",
+    "mpCost": 12,
+    "power": 22,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "n_desfibrilar",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 12,
+    "power": 0,
+    "target": "AliadoUno",
+    "revive": 0.5
+  },
+  {
+    "id": "i_puno_servicio",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 16,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "i_engranaje",
+    "kind": "Magica",
+    "element": "Metal",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "i_pasarela",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 10,
+    "power": 0,
+    "target": "AliadosTodos",
+    "applyStatus": "Prisa",
+    "statusChance": 1.0,
+    "statusDuration": 3
+  },
+  {
+    "id": "i_placas",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 8,
+    "power": 0,
+    "target": "AliadosTodos",
+    "applyStatus": "Proteccion",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "i_recalibrar",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 4,
+    "power": 0,
+    "target": "AliadoUno",
+    "cureStatuses": [
+      "Veneno",
+      "Sueno",
+      "Aturdido",
+      "Silencio",
+      "Ceguera",
+      "Confusion",
+      "Olvido",
+      "Lentitud"
+    ]
+  },
+  {
+    "id": "i_prensa_hidraulica",
+    "kind": "Fisica",
+    "element": "Metal",
+    "mpCost": 12,
+    "power": 34,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "d_golpe_de_orbe",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 2,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "d_tres_voces",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 4,
+    "power": 15,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "d_desacople",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 5,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Confusion",
+    "statusChance": 0.4,
+    "statusDuration": 2
+  },
+  {
+    "id": "d_coral_sereno",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 6,
+    "power": 22,
+    "target": "AliadoUno",
+    "healing": true,
+    "applyStatus": "Regeneracion",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "d_disenso",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 10,
+    "power": 20,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "d_tres_desacuerdos",
+    "kind": "Magica",
+    "element": "Neutro",
+    "mpCost": 8,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Olvido",
+    "statusChance": 0.6,
+    "statusDuration": 3
+  },
+  {
+    "id": "d_futuro_no_previsto",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 18,
+    "power": 40,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "c_mordisco",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 1,
+    "power": 13,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_aullido_viento",
+    "kind": "Magica",
+    "element": "Viento",
+    "mpCost": 4,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_galerna",
+    "kind": "Magica",
+    "element": "Viento",
+    "mpCost": 9,
+    "power": 18,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "c_caparazon",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 4,
+    "power": 0,
+    "target": "Propio",
+    "applyStatus": "Proteccion",
+    "statusChance": 1.0,
+    "statusDuration": 4
+  },
+  {
+    "id": "c_terremoto_lento",
+    "kind": "Magica",
+    "element": "Tierra",
+    "mpCost": 8,
+    "power": 18,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "c_salpicon",
+    "kind": "Magica",
+    "element": "Agua",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_marejada",
+    "kind": "Magica",
+    "element": "Agua",
+    "mpCost": 9,
+    "power": 18,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "c_picado",
+    "kind": "Fisica",
+    "element": "Viento",
+    "mpCost": 3,
+    "power": 18,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_ascua",
+    "kind": "Magica",
+    "element": "Fuego",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_fragua",
+    "kind": "Magica",
+    "element": "Fuego",
+    "mpCost": 9,
+    "power": 18,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "c_dar_cuerda",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 0,
+    "target": "AliadoUno",
+    "applyStatus": "Prisa",
+    "statusChance": 1.0,
+    "statusDuration": 3
+  },
+  {
+    "id": "c_chirrido",
+    "kind": "Magica",
+    "element": "Metal",
+    "mpCost": 4,
+    "power": 14,
+    "target": "EnemigoUno",
+    "applyStatus": "Aturdido",
+    "statusChance": 0.15,
+    "statusDuration": 1
+  },
+  {
+    "id": "c_estatica",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 3,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_ecolocacion",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 5,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Ceguera",
+    "statusChance": 0.5,
+    "statusDuration": 3
+  },
+  {
+    "id": "c_luz_medusa",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 18,
+    "target": "AliadoUno",
+    "healing": true
+  },
+  {
+    "id": "c_aguijon_luz",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 4,
+    "power": 14,
+    "target": "EnemigoUno",
+    "applyStatus": "Aturdido",
+    "statusChance": 0.2,
+    "statusDuration": 1
+  },
+  {
+    "id": "c_polvo_nocturno",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 5,
+    "power": 0,
+    "target": "EnemigosTodos",
+    "applyStatus": "Sueno",
+    "statusChance": 0.3,
+    "statusDuration": 2
+  },
+  {
+    "id": "c_ala_vacia",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 4,
+    "power": 15,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_promesa",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 6,
+    "power": 14,
+    "target": "AliadosTodos",
+    "healing": true
+  },
+  {
+    "id": "c_juramento",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 10,
+    "power": 26,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_pinza",
+    "kind": "Fisica",
+    "element": "Metal",
+    "mpCost": 2,
+    "power": 16,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "c_bastion",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 8,
+    "power": 0,
+    "target": "AliadosTodos",
+    "applyStatus": "Proteccion",
+    "statusChance": 1.0,
+    "statusDuration": 3
+  },
+  {
+    "id": "e_vaciar",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 0,
+    "power": 12,
+    "target": "EnemigoUno",
+    "applyStatus": "Olvido",
+    "statusChance": 0.15,
+    "statusDuration": 2
+  },
+  {
+    "id": "e_grito_hueco",
+    "kind": "Magica",
+    "element": "Vacio",
+    "mpCost": 4,
+    "power": 10,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "e_mordida_anguila",
+    "kind": "Fisica",
+    "element": "Agua",
+    "mpCost": 0,
+    "power": 12,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "e_descarga_anguila",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 3,
+    "power": 12,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "e_escaneo",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 0,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Ceguera",
+    "statusChance": 0.3,
+    "statusDuration": 2
+  },
+  {
+    "id": "e_rayo_dron",
+    "kind": "Magica",
+    "element": "Rayo",
+    "mpCost": 2,
+    "power": 12,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "e_citacion",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 3,
+    "power": 0,
+    "target": "EnemigoUno",
+    "applyStatus": "Silencio",
+    "statusChance": 0.4,
+    "statusDuration": 3
+  },
+  {
+    "id": "e_corregir_registro",
+    "kind": "Magica",
+    "element": "Luz",
+    "mpCost": 4,
+    "power": 14,
+    "target": "EnemigoUno",
+    "applyStatus": "Olvido",
+    "statusChance": 0.25,
+    "statusDuration": 2
+  },
+  {
+    "id": "e_sello_legal",
+    "kind": "Magica",
+    "element": "Metal",
+    "mpCost": 6,
+    "power": 12,
+    "target": "EnemigosTodos"
+  },
+  {
+    "id": "e_reparar",
+    "kind": "Apoyo",
+    "element": "Neutro",
+    "mpCost": 5,
+    "power": 20,
+    "target": "AliadoUno",
+    "healing": true
+  },
+  {
+    "id": "e_lanza",
+    "kind": "Fisica",
+    "element": "Neutro",
+    "mpCost": 0,
+    "power": 14,
+    "target": "EnemigoUno"
+  },
+  {
+    "id": "e_censo",
+    "kind": "Magica",
+    "element": "Tierra",
+    "mpCost": 4,
+    "power": 10,
+    "target": "EnemigosTodos",
+    "applyStatus": "Lentitud",
+    "statusChance": 0.3,
+    "statusDuration": 2
+  }
+]

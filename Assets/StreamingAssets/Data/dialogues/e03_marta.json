@@ -1,0 +1,31 @@
+{
+  "id": "e03_marta",
+  "start": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "textKey": "dlg.e03_marta.n1",
+      "speakerKey": "npc.marta.name",
+      "next": "n2"
+    },
+    {
+      "id": "n2",
+      "textKey": "dlg.e03_marta.n2",
+      "speakerKey": "char.angel.name",
+      "next": "n3"
+    },
+    {
+      "id": "n3",
+      "textKey": "dlg.e03_marta.n3",
+      "speakerKey": "npc.marta.name",
+      "next": "n4"
+    },
+    {
+      "id": "n4",
+      "textKey": "dlg.e03_marta.n4",
+      "actions": [
+        "give:llave_de_marta:1"
+      ]
+    }
+  ]
+}

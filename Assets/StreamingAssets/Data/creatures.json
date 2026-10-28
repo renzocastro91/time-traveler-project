@@ -1,0 +1,1678 @@
+[
+  {
+    "id": "tropel",
+    "family": "callejero",
+    "stage": 1,
+    "era": "2000",
+    "element": "Viento",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 60,
+      "MaxMp": 12,
+      "Fuerza": 9,
+      "Magia": 6,
+      "Defensa": 5,
+      "DefensaMagica": 4,
+      "Velocidad": 13,
+      "Precision": 9,
+      "Evasion": 9,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_aullido_viento"
+      },
+      {
+        "level": 18,
+        "techniqueId": "c_galerna"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "ventolero",
+        "minLevel": 14,
+        "minAffinity": 30
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 1,
+    "favoriteOfferingId": "bizcocho"
+  },
+  {
+    "id": "ventolero",
+    "family": "callejero",
+    "stage": 2,
+    "era": "2000",
+    "element": "Viento",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 85,
+      "MaxMp": 18,
+      "Fuerza": 13,
+      "Magia": 8,
+      "Defensa": 7,
+      "DefensaMagica": 6,
+      "Velocidad": 17,
+      "Precision": 11,
+      "Evasion": 12,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_aullido_viento"
+      },
+      {
+        "level": 18,
+        "techniqueId": "c_galerna"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "galerno",
+        "minLevel": 32,
+        "minAffinity": 70,
+        "requiredItemId": "fragmento_de_eco"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 1,
+    "favoriteOfferingId": "bizcocho"
+  },
+  {
+    "id": "galerno",
+    "family": "callejero",
+    "stage": 3,
+    "era": "2000",
+    "element": "Viento",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 120,
+      "MaxMp": 26,
+      "Fuerza": 20,
+      "Magia": 12,
+      "Defensa": 10,
+      "DefensaMagica": 9,
+      "Velocidad": 22,
+      "Precision": 13,
+      "Evasion": 15,
+      "Suerte": 9
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_aullido_viento"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_galerna"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 1,
+    "favoriteOfferingId": "bizcocho"
+  },
+  {
+    "id": "galapago_olivar",
+    "family": "galapago",
+    "stage": 1,
+    "era": "-330",
+    "element": "Tierra",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 75,
+      "MaxMp": 10,
+      "Fuerza": 8,
+      "Magia": 6,
+      "Defensa": 9,
+      "DefensaMagica": 6,
+      "Velocidad": 6,
+      "Precision": 8,
+      "Evasion": 3,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 1.4,
+      "Fuerza": 1.2,
+      "Magia": 0.9,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.3,
+      "Precision": 0.4,
+      "Evasion": 0.2,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_caparazon"
+      },
+      {
+        "level": 16,
+        "techniqueId": "c_terremoto_lento"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "caparazon_anfora",
+        "minLevel": 16,
+        "minAffinity": 30
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pan_de_lira"
+  },
+  {
+    "id": "caparazon_anfora",
+    "family": "galapago",
+    "stage": 2,
+    "era": "-330",
+    "element": "Tierra",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 105,
+      "MaxMp": 14,
+      "Fuerza": 11,
+      "Magia": 8,
+      "Defensa": 14,
+      "DefensaMagica": 9,
+      "Velocidad": 7,
+      "Precision": 9,
+      "Evasion": 4,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 1.4,
+      "Fuerza": 1.2,
+      "Magia": 0.9,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.3,
+      "Precision": 0.4,
+      "Evasion": 0.2,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_caparazon"
+      },
+      {
+        "level": 16,
+        "techniqueId": "c_terremoto_lento"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "atlas_de_piedra",
+        "minLevel": 34,
+        "minAffinity": 70,
+        "requiredItemId": "fragmento_de_eco"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pan_de_lira"
+  },
+  {
+    "id": "atlas_de_piedra",
+    "family": "galapago",
+    "stage": 3,
+    "era": "-330",
+    "element": "Tierra",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 150,
+      "MaxMp": 20,
+      "Fuerza": 16,
+      "Magia": 11,
+      "Defensa": 20,
+      "DefensaMagica": 13,
+      "Velocidad": 8,
+      "Precision": 10,
+      "Evasion": 5,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 1.4,
+      "Fuerza": 1.2,
+      "Magia": 0.9,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.3,
+      "Precision": 0.4,
+      "Evasion": 0.2,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_caparazon"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_terremoto_lento"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pan_de_lira"
+  },
+  {
+    "id": "nutrilla",
+    "family": "nutria",
+    "stage": 1,
+    "era": "1542",
+    "element": "Agua",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 62,
+      "MaxMp": 14,
+      "Fuerza": 8,
+      "Magia": 9,
+      "Defensa": 5,
+      "DefensaMagica": 6,
+      "Velocidad": 12,
+      "Precision": 9,
+      "Evasion": 10,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_salpicon"
+      },
+      {
+        "level": 17,
+        "techniqueId": "c_marejada"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "nutria_de_mareas",
+        "minLevel": 15,
+        "minAffinity": 30
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pescado_seco"
+  },
+  {
+    "id": "nutria_de_mareas",
+    "family": "nutria",
+    "stage": 2,
+    "era": "1542",
+    "element": "Agua",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 88,
+      "MaxMp": 20,
+      "Fuerza": 11,
+      "Magia": 13,
+      "Defensa": 7,
+      "DefensaMagica": 9,
+      "Velocidad": 15,
+      "Precision": 11,
+      "Evasion": 12,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_salpicon"
+      },
+      {
+        "level": 17,
+        "techniqueId": "c_marejada"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "marejada",
+        "minLevel": 33,
+        "minAffinity": 70,
+        "requiredItemId": "escama_de_marea",
+        "requiredEra": "1542"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pescado_seco"
+  },
+  {
+    "id": "marejada",
+    "family": "nutria",
+    "stage": 3,
+    "era": "1542",
+    "element": "Agua",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 125,
+      "MaxMp": 28,
+      "Fuerza": 15,
+      "Magia": 19,
+      "Defensa": 10,
+      "DefensaMagica": 13,
+      "Velocidad": 19,
+      "Precision": 13,
+      "Evasion": 14,
+      "Suerte": 9
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_salpicon"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_marejada"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "pescado_seco"
+  },
+  {
+    "id": "pichon_de_fragata",
+    "family": "fragata",
+    "stage": 1,
+    "era": "1542",
+    "element": "Viento",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 58,
+      "MaxMp": 12,
+      "Fuerza": 11,
+      "Magia": 7,
+      "Defensa": 5,
+      "DefensaMagica": 5,
+      "Velocidad": 15,
+      "Precision": 11,
+      "Evasion": 12,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_picado"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_aullido_viento"
+      },
+      {
+        "level": 20,
+        "techniqueId": "c_galerna"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "fragata_tormenta",
+        "minLevel": 20,
+        "minAffinity": 40
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "pescado_seco"
+  },
+  {
+    "id": "fragata_tormenta",
+    "family": "fragata",
+    "stage": 2,
+    "era": "1542",
+    "element": "Viento",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 90,
+      "MaxMp": 20,
+      "Fuerza": 17,
+      "Magia": 10,
+      "Defensa": 8,
+      "DefensaMagica": 8,
+      "Velocidad": 21,
+      "Precision": 14,
+      "Evasion": 16,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_picado"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_aullido_viento"
+      },
+      {
+        "level": 20,
+        "techniqueId": "c_galerna"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "pescado_seco"
+  },
+  {
+    "id": "ascuela",
+    "family": "salamandra",
+    "stage": 1,
+    "era": "1891",
+    "element": "Fuego",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 58,
+      "MaxMp": 14,
+      "Fuerza": 7,
+      "Magia": 10,
+      "Defensa": 5,
+      "DefensaMagica": 6,
+      "Velocidad": 11,
+      "Precision": 9,
+      "Evasion": 9,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_ascua"
+      },
+      {
+        "level": 17,
+        "techniqueId": "c_fragua"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "salamandra_de_horno",
+        "minLevel": 15,
+        "minAffinity": 30
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "carbon_dulce"
+  },
+  {
+    "id": "salamandra_de_horno",
+    "family": "salamandra",
+    "stage": 2,
+    "era": "1891",
+    "element": "Fuego",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 82,
+      "MaxMp": 22,
+      "Fuerza": 10,
+      "Magia": 15,
+      "Defensa": 7,
+      "DefensaMagica": 9,
+      "Velocidad": 13,
+      "Precision": 10,
+      "Evasion": 11,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_ascua"
+      },
+      {
+        "level": 17,
+        "techniqueId": "c_fragua"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "salamandra_caldera",
+        "minLevel": 33,
+        "minAffinity": 70,
+        "requiredItemId": "ascua_eterna"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "carbon_dulce"
+  },
+  {
+    "id": "salamandra_caldera",
+    "family": "salamandra",
+    "stage": 3,
+    "era": "1891",
+    "element": "Fuego",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 115,
+      "MaxMp": 32,
+      "Fuerza": 14,
+      "Magia": 22,
+      "Defensa": 10,
+      "DefensaMagica": 13,
+      "Velocidad": 16,
+      "Precision": 12,
+      "Evasion": 13,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_ascua"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_fragua"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "carbon_dulce"
+  },
+  {
+    "id": "grillo_de_laton",
+    "family": "grillo",
+    "stage": 1,
+    "era": "1891",
+    "element": "Metal",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 60,
+      "MaxMp": 12,
+      "Fuerza": 9,
+      "Magia": 8,
+      "Defensa": 8,
+      "DefensaMagica": 5,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 7,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_chirrido"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_dar_cuerda"
+      },
+      {
+        "level": 18,
+        "techniqueId": "c_pinza"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "cigarra_de_vapor",
+        "minLevel": 18,
+        "minAffinity": 35
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "cigarra_de_vapor",
+    "family": "grillo",
+    "stage": 2,
+    "era": "1891",
+    "element": "Metal",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 86,
+      "MaxMp": 18,
+      "Fuerza": 13,
+      "Magia": 11,
+      "Defensa": 12,
+      "DefensaMagica": 8,
+      "Velocidad": 12,
+      "Precision": 12,
+      "Evasion": 9,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_chirrido"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_dar_cuerda"
+      },
+      {
+        "level": 18,
+        "techniqueId": "c_pinza"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "mantis_locomotora",
+        "minLevel": 35,
+        "minAffinity": 70,
+        "requiredItemId": "engranaje_maestro"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "mantis_locomotora",
+    "family": "grillo",
+    "stage": 3,
+    "era": "1891",
+    "element": "Metal",
+    "temperament": "Curioso",
+    "baseStats": {
+      "MaxHp": 122,
+      "MaxMp": 26,
+      "Fuerza": 19,
+      "Magia": 15,
+      "Defensa": 17,
+      "DefensaMagica": 11,
+      "Velocidad": 15,
+      "Precision": 14,
+      "Evasion": 11,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_chirrido"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_dar_cuerda"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_pinza"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 2,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "pipistrelo",
+    "family": "murcielago",
+    "stage": 1,
+    "era": "2026",
+    "element": "Rayo",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 55,
+      "MaxMp": 14,
+      "Fuerza": 8,
+      "Magia": 10,
+      "Defensa": 4,
+      "DefensaMagica": 6,
+      "Velocidad": 14,
+      "Precision": 10,
+      "Evasion": 12,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_estatica"
+      },
+      {
+        "level": 10,
+        "techniqueId": "c_ecolocacion"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "murcielago_estatico",
+        "minLevel": 15,
+        "minAffinity": 30
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "flor_de_estuario"
+  },
+  {
+    "id": "murcielago_estatico",
+    "family": "murcielago",
+    "stage": 2,
+    "era": "2026",
+    "element": "Rayo",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 78,
+      "MaxMp": 22,
+      "Fuerza": 11,
+      "Magia": 15,
+      "Defensa": 6,
+      "DefensaMagica": 9,
+      "Velocidad": 18,
+      "Precision": 12,
+      "Evasion": 15,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_estatica"
+      },
+      {
+        "level": 10,
+        "techniqueId": "c_ecolocacion"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "tormentala",
+        "minLevel": 33,
+        "minAffinity": 70,
+        "requiredItemId": "fragmento_de_eco"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "flor_de_estuario"
+  },
+  {
+    "id": "tormentala",
+    "family": "murcielago",
+    "stage": 3,
+    "era": "2026",
+    "element": "Rayo",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 108,
+      "MaxMp": 32,
+      "Fuerza": 15,
+      "Magia": 22,
+      "Defensa": 8,
+      "DefensaMagica": 13,
+      "Velocidad": 23,
+      "Precision": 14,
+      "Evasion": 18,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_estatica"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_ecolocacion"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "flor_de_estuario"
+  },
+  {
+    "id": "lumedusa",
+    "family": "medusa",
+    "stage": 1,
+    "era": "2140",
+    "element": "Luz",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 56,
+      "MaxMp": 18,
+      "Fuerza": 5,
+      "Magia": 11,
+      "Defensa": 5,
+      "DefensaMagica": 9,
+      "Velocidad": 9,
+      "Precision": 9,
+      "Evasion": 9,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_aguijon_luz"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_luz_medusa"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "faro_medusa",
+        "minLevel": 22,
+        "minAffinity": 40
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "flor_de_estuario"
+  },
+  {
+    "id": "faro_medusa",
+    "family": "medusa",
+    "stage": 2,
+    "era": "2140",
+    "element": "Luz",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 90,
+      "MaxMp": 30,
+      "Fuerza": 8,
+      "Magia": 18,
+      "Defensa": 8,
+      "DefensaMagica": 14,
+      "Velocidad": 11,
+      "Precision": 11,
+      "Evasion": 11,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_aguijon_luz"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_luz_medusa"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "flor_de_estuario"
+  },
+  {
+    "id": "pinzaro",
+    "family": "cangrejo",
+    "stage": 1,
+    "era": "2140",
+    "element": "Metal",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 70,
+      "MaxMp": 10,
+      "Fuerza": 10,
+      "Magia": 5,
+      "Defensa": 11,
+      "DefensaMagica": 6,
+      "Velocidad": 7,
+      "Precision": 9,
+      "Evasion": 4,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 1.4,
+      "Fuerza": 1.2,
+      "Magia": 0.9,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.3,
+      "Precision": 0.4,
+      "Evasion": 0.2,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_pinza"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_caparazon"
+      },
+      {
+        "level": 24,
+        "techniqueId": "c_bastion"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "bastion_de_dique",
+        "minLevel": 24,
+        "minAffinity": 40
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "bastion_de_dique",
+    "family": "cangrejo",
+    "stage": 2,
+    "era": "2140",
+    "element": "Metal",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 118,
+      "MaxMp": 16,
+      "Fuerza": 16,
+      "Magia": 7,
+      "Defensa": 18,
+      "DefensaMagica": 9,
+      "Velocidad": 8,
+      "Precision": 10,
+      "Evasion": 5,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 1.4,
+      "Fuerza": 1.2,
+      "Magia": 0.9,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.3,
+      "Precision": 0.4,
+      "Evasion": 0.2,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_pinza"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_caparazon"
+      },
+      {
+        "level": 24,
+        "techniqueId": "c_bastion"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 3,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "escaralambre",
+    "family": "escarabajo",
+    "stage": 1,
+    "era": "2749",
+    "element": "Rayo",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 62,
+      "MaxMp": 14,
+      "Fuerza": 10,
+      "Magia": 9,
+      "Defensa": 9,
+      "DefensaMagica": 7,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 7,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_estatica"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_pinza"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "escarabajo_catedral",
+        "minLevel": 26,
+        "minAffinity": 50,
+        "requiredItemId": "engranaje_maestro"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "escarabajo_catedral",
+    "family": "escarabajo",
+    "stage": 2,
+    "era": "2749",
+    "element": "Rayo",
+    "temperament": "Orgulloso",
+    "baseStats": {
+      "MaxHp": 105,
+      "MaxMp": 24,
+      "Fuerza": 16,
+      "Magia": 15,
+      "Defensa": 14,
+      "DefensaMagica": 11,
+      "Velocidad": 13,
+      "Precision": 12,
+      "Evasion": 9,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 8.5,
+      "MaxMp": 1.8,
+      "Fuerza": 1.2,
+      "Magia": 1.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.0,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_estatica"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_pinza"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "tuerca_brillante"
+  },
+  {
+    "id": "nictela",
+    "family": "polilla",
+    "stage": 1,
+    "era": "8800",
+    "element": "Vacio",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 54,
+      "MaxMp": 16,
+      "Fuerza": 6,
+      "Magia": 11,
+      "Defensa": 5,
+      "DefensaMagica": 8,
+      "Velocidad": 13,
+      "Precision": 9,
+      "Evasion": 13,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_ala_vacia"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_polvo_nocturno"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "polilla_baja_luz",
+        "minLevel": 20,
+        "minAffinity": 35
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "nectar_coral"
+  },
+  {
+    "id": "polilla_baja_luz",
+    "family": "polilla",
+    "stage": 2,
+    "era": "8800",
+    "element": "Vacio",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 80,
+      "MaxMp": 26,
+      "Fuerza": 9,
+      "Magia": 17,
+      "Defensa": 7,
+      "DefensaMagica": 12,
+      "Velocidad": 16,
+      "Precision": 11,
+      "Evasion": 16,
+      "Suerte": 9
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_ala_vacia"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_polvo_nocturno"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "mariposa_ultimo_atardecer",
+        "minLevel": 38,
+        "minAffinity": 80,
+        "requiredItemId": "coral_de_baja_luz"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "nectar_coral"
+  },
+  {
+    "id": "mariposa_ultimo_atardecer",
+    "family": "polilla",
+    "stage": 3,
+    "era": "8800",
+    "element": "Vacio",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 112,
+      "MaxMp": 38,
+      "Fuerza": 12,
+      "Magia": 25,
+      "Defensa": 10,
+      "DefensaMagica": 17,
+      "Velocidad": 20,
+      "Precision": 13,
+      "Evasion": 20,
+      "Suerte": 10
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_ala_vacia"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_polvo_nocturno"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 4,
+    "favoriteOfferingId": "nectar_coral"
+  },
+  {
+    "id": "promesin",
+    "family": "promesa",
+    "stage": 1,
+    "era": "orillas",
+    "element": "Luz",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 64,
+      "MaxMp": 20,
+      "Fuerza": 7,
+      "Magia": 12,
+      "Defensa": 7,
+      "DefensaMagica": 10,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 10,
+      "Suerte": 10
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_promesa"
+      },
+      {
+        "level": 30,
+        "techniqueId": "c_juramento"
+      }
+    ],
+    "evolutions": [
+      {
+        "toSpeciesId": "juramento",
+        "minLevel": 30,
+        "minAffinity": 80,
+        "requiredFlag": "FUTURO_LIBRE"
+      }
+    ],
+    "bondable": true,
+    "bondDifficulty": 5,
+    "bondCondition": "PLURALIDAD>=3"
+  },
+  {
+    "id": "juramento",
+    "family": "promesa",
+    "stage": 2,
+    "era": "orillas",
+    "element": "Luz",
+    "temperament": "Sereno",
+    "baseStats": {
+      "MaxHp": 110,
+      "MaxMp": 34,
+      "Fuerza": 12,
+      "Magia": 22,
+      "Defensa": 12,
+      "DefensaMagica": 17,
+      "Velocidad": 13,
+      "Precision": 13,
+      "Evasion": 13,
+      "Suerte": 12
+    },
+    "growth": {
+      "MaxHp": 7.5,
+      "MaxMp": 2.2,
+      "Fuerza": 0.9,
+      "Magia": 1.6,
+      "Defensa": 0.8,
+      "DefensaMagica": 1.2,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_promesa"
+      },
+      {
+        "level": 1,
+        "techniqueId": "c_juramento"
+      }
+    ],
+    "evolutions": [],
+    "bondable": true,
+    "bondDifficulty": 5
+  },
+  {
+    "id": "cria_emplumada",
+    "family": "cretacico",
+    "stage": 1,
+    "era": "-72400000",
+    "element": "Viento",
+    "temperament": "Timido",
+    "baseStats": {
+      "MaxHp": 40,
+      "Fuerza": 5,
+      "Defensa": 3,
+      "DefensaMagica": 3,
+      "Velocidad": 12,
+      "Precision": 8,
+      "Evasion": 10,
+      "Suerte": 5
+    },
+    "growth": {
+      "MaxHp": 8,
+      "MaxMp": 1.6,
+      "Fuerza": 1.4,
+      "Magia": 1.0,
+      "Defensa": 0.9,
+      "DefensaMagica": 0.8,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "c_mordisco"
+      }
+    ],
+    "evolutions": [],
+    "bondable": false,
+    "bondDifficulty": 5
+  }
+]

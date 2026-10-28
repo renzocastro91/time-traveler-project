@@ -1,0 +1,514 @@
+[
+  {
+    "id": "violeta",
+    "era": "2000",
+    "age": 16,
+    "element": "Viento",
+    "weaponType": "cable",
+    "baseStats": {
+      "MaxHp": 78,
+      "MaxMp": 18,
+      "Fuerza": 9,
+      "Magia": 11,
+      "Defensa": 6,
+      "DefensaMagica": 8,
+      "Velocidad": 12,
+      "Precision": 10,
+      "Evasion": 10,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 2.6,
+      "Fuerza": 1.4,
+      "Magia": 1.8,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.3,
+      "Velocidad": 0.6,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "v_latigazo"
+      },
+      {
+        "level": 1,
+        "techniqueId": "v_eco"
+      },
+      {
+        "level": 4,
+        "techniqueId": "v_rebobinar"
+      },
+      {
+        "level": 8,
+        "techniqueId": "v_vendaval"
+      },
+      {
+        "level": 12,
+        "techniqueId": "v_nota_sostenida"
+      },
+      {
+        "level": 18,
+        "techniqueId": "v_contrapunto"
+      },
+      {
+        "level": 26,
+        "techniqueId": "v_cancion_inversa"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "cable_microfono",
+      "Peto": "chaqueta_escolar",
+      "Botas": "zapatillas_lona"
+    }
+  },
+  {
+    "id": "angel",
+    "era": "2000",
+    "age": 17,
+    "element": "Rayo",
+    "weaponType": "espada",
+    "baseStats": {
+      "MaxHp": 88,
+      "MaxMp": 12,
+      "Fuerza": 12,
+      "Magia": 8,
+      "Defensa": 8,
+      "DefensaMagica": 6,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 7,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 12,
+      "MaxMp": 1.8,
+      "Fuerza": 1.9,
+      "Magia": 1.2,
+      "Defensa": 1.3,
+      "DefensaMagica": 0.9,
+      "Velocidad": 0.5,
+      "Precision": 0.5,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "a_tajo"
+      },
+      {
+        "level": 1,
+        "techniqueId": "a_pulso"
+      },
+      {
+        "level": 5,
+        "techniqueId": "a_corte_cruzado"
+      },
+      {
+        "level": 9,
+        "techniqueId": "a_chispazo"
+      },
+      {
+        "level": 13,
+        "techniqueId": "a_escudo_chatarra"
+      },
+      {
+        "level": 20,
+        "techniqueId": "a_sobrecarga"
+      },
+      {
+        "level": 27,
+        "techniqueId": "a_tormenta_de_antena"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "espada_de_utileria",
+      "Peto": "campera_de_taller",
+      "Guantes": "guantes_de_taller",
+      "Botas": "zapatillas_lona"
+    }
+  },
+  {
+    "id": "sura",
+    "era": "-330",
+    "age": 32,
+    "element": "Tierra",
+    "weaponType": "estilo",
+    "baseStats": {
+      "MaxHp": 80,
+      "MaxMp": 20,
+      "Fuerza": 9,
+      "Magia": 12,
+      "Defensa": 7,
+      "DefensaMagica": 10,
+      "Velocidad": 9,
+      "Precision": 10,
+      "Evasion": 8,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 10,
+      "MaxMp": 2.8,
+      "Fuerza": 1.2,
+      "Magia": 1.9,
+      "Defensa": 1.1,
+      "DefensaMagica": 1.5,
+      "Velocidad": 0.4,
+      "Precision": 0.4,
+      "Evasion": 0.4,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "s_tablilla"
+      },
+      {
+        "level": 1,
+        "techniqueId": "s_vibracion"
+      },
+      {
+        "level": 1,
+        "techniqueId": "s_escudo_pacto"
+      },
+      {
+        "level": 10,
+        "techniqueId": "s_sismo"
+      },
+      {
+        "level": 15,
+        "techniqueId": "s_nombre_devuelto"
+      },
+      {
+        "level": 22,
+        "techniqueId": "s_alfabeto_barro"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "estilo_de_cana",
+      "Peto": "tunica_de_lino",
+      "Botas": "sandalias_lira"
+    }
+  },
+  {
+    "id": "teo",
+    "era": "1891",
+    "age": 26,
+    "element": "Fuego",
+    "weaponType": "martillo",
+    "baseStats": {
+      "MaxHp": 92,
+      "MaxMp": 14,
+      "Fuerza": 13,
+      "Magia": 9,
+      "Defensa": 9,
+      "DefensaMagica": 6,
+      "Velocidad": 8,
+      "Precision": 9,
+      "Evasion": 6,
+      "Suerte": 7
+    },
+    "growth": {
+      "MaxHp": 12.5,
+      "MaxMp": 2.0,
+      "Fuerza": 2.0,
+      "Magia": 1.3,
+      "Defensa": 1.3,
+      "DefensaMagica": 0.9,
+      "Velocidad": 0.4,
+      "Precision": 0.4,
+      "Evasion": 0.3,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "t_martillazo"
+      },
+      {
+        "level": 1,
+        "techniqueId": "t_tinta_ardiente"
+      },
+      {
+        "level": 1,
+        "techniqueId": "t_plancha_caliente"
+      },
+      {
+        "level": 12,
+        "techniqueId": "t_llamarada_prensa"
+      },
+      {
+        "level": 16,
+        "techniqueId": "t_eco_mecanico"
+      },
+      {
+        "level": 24,
+        "techniqueId": "t_edicion_extra"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "martillo_tipografico",
+      "Peto": "delantal_de_imprenta",
+      "Guantes": "guantes_de_cuero"
+    }
+  },
+  {
+    "id": "lia",
+    "era": "2026",
+    "age": 42,
+    "element": "Luz",
+    "weaponType": "linterna",
+    "baseStats": {
+      "MaxHp": 74,
+      "MaxMp": 22,
+      "Fuerza": 7,
+      "Magia": 12,
+      "Defensa": 6,
+      "DefensaMagica": 10,
+      "Velocidad": 10,
+      "Precision": 11,
+      "Evasion": 8,
+      "Suerte": 8
+    },
+    "growth": {
+      "MaxHp": 9.5,
+      "MaxMp": 3.0,
+      "Fuerza": 1.0,
+      "Magia": 2.0,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.5,
+      "Velocidad": 0.5,
+      "Precision": 0.5,
+      "Evasion": 0.4,
+      "Suerte": 0.4
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "l_carpetazo"
+      },
+      {
+        "level": 1,
+        "techniqueId": "l_destello"
+      },
+      {
+        "level": 1,
+        "techniqueId": "l_auditoria"
+      },
+      {
+        "level": 7,
+        "techniqueId": "l_luz_de_archivo"
+      },
+      {
+        "level": 11,
+        "techniqueId": "l_foco"
+      },
+      {
+        "level": 19,
+        "techniqueId": "l_sentencia_clara"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "linterna_tactica",
+      "Peto": "saco_de_archivo",
+      "Botas": "zapatos_de_oficina"
+    }
+  },
+  {
+    "id": "anouk",
+    "era": "2140",
+    "age": 36,
+    "element": "Agua",
+    "weaponType": "bisturi",
+    "baseStats": {
+      "MaxHp": 76,
+      "MaxMp": 22,
+      "Fuerza": 9,
+      "Magia": 12,
+      "Defensa": 6,
+      "DefensaMagica": 9,
+      "Velocidad": 11,
+      "Precision": 12,
+      "Evasion": 9,
+      "Suerte": 6
+    },
+    "growth": {
+      "MaxHp": 9.5,
+      "MaxMp": 3.0,
+      "Fuerza": 1.3,
+      "Magia": 1.9,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.4,
+      "Velocidad": 0.5,
+      "Precision": 0.5,
+      "Evasion": 0.5,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "n_incision"
+      },
+      {
+        "level": 1,
+        "techniqueId": "n_marea"
+      },
+      {
+        "level": 1,
+        "techniqueId": "n_sutura"
+      },
+      {
+        "level": 1,
+        "techniqueId": "n_triaje"
+      },
+      {
+        "level": 14,
+        "techniqueId": "n_sedante"
+      },
+      {
+        "level": 20,
+        "techniqueId": "n_diluvio"
+      },
+      {
+        "level": 25,
+        "techniqueId": "n_desfibrilar"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "bisturi_de_dique",
+      "Peto": "bata_impermeable",
+      "Guantes": "guantes_quirurgicos"
+    }
+  },
+  {
+    "id": "imen",
+    "era": "2749",
+    "age": 71,
+    "element": "Metal",
+    "weaponType": "guantelete",
+    "baseStats": {
+      "MaxHp": 90,
+      "MaxMp": 16,
+      "Fuerza": 13,
+      "Magia": 10,
+      "Defensa": 10,
+      "DefensaMagica": 8,
+      "Velocidad": 9,
+      "Precision": 10,
+      "Evasion": 6,
+      "Suerte": 5
+    },
+    "growth": {
+      "MaxHp": 12,
+      "MaxMp": 2.2,
+      "Fuerza": 1.9,
+      "Magia": 1.5,
+      "Defensa": 1.4,
+      "DefensaMagica": 1.1,
+      "Velocidad": 0.4,
+      "Precision": 0.4,
+      "Evasion": 0.3,
+      "Suerte": 0.3
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "i_puno_servicio"
+      },
+      {
+        "level": 1,
+        "techniqueId": "i_engranaje"
+      },
+      {
+        "level": 1,
+        "techniqueId": "i_pasarela"
+      },
+      {
+        "level": 1,
+        "techniqueId": "i_placas"
+      },
+      {
+        "level": 1,
+        "techniqueId": "i_recalibrar"
+      },
+      {
+        "level": 20,
+        "techniqueId": "i_prensa_hidraulica"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "guantelete_pila",
+      "Casco": "visor_de_servicio",
+      "Peto": "traje_de_mantenimiento"
+    }
+  },
+  {
+    "id": "anida",
+    "era": "8800",
+    "age": 0,
+    "element": "Vacio",
+    "weaponType": "orbe",
+    "baseStats": {
+      "MaxHp": 72,
+      "MaxMp": 26,
+      "Fuerza": 7,
+      "Magia": 14,
+      "Defensa": 6,
+      "DefensaMagica": 12,
+      "Velocidad": 11,
+      "Precision": 10,
+      "Evasion": 10,
+      "Suerte": 9
+    },
+    "growth": {
+      "MaxHp": 9,
+      "MaxMp": 3.4,
+      "Fuerza": 1.0,
+      "Magia": 2.2,
+      "Defensa": 1.0,
+      "DefensaMagica": 1.6,
+      "Velocidad": 0.5,
+      "Precision": 0.4,
+      "Evasion": 0.5,
+      "Suerte": 0.4
+    },
+    "learnset": [
+      {
+        "level": 1,
+        "techniqueId": "d_golpe_de_orbe"
+      },
+      {
+        "level": 1,
+        "techniqueId": "d_tres_voces"
+      },
+      {
+        "level": 1,
+        "techniqueId": "d_desacople"
+      },
+      {
+        "level": 1,
+        "techniqueId": "d_coral_sereno"
+      },
+      {
+        "level": 1,
+        "techniqueId": "d_disenso"
+      },
+      {
+        "level": 1,
+        "techniqueId": "d_tres_desacuerdos"
+      },
+      {
+        "level": 30,
+        "techniqueId": "d_futuro_no_previsto"
+      }
+    ],
+    "startingEquipment": {
+      "Arma": "orbe_coral",
+      "Peto": "manto_de_baja_luz"
+    }
+  }
+]

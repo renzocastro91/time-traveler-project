@@ -1,0 +1,128 @@
+[
+  {
+    "id": "TESTIMONIOS",
+    "min": 0,
+    "max": 8,
+    "initial": 0
+  },
+  {
+    "id": "CONSENTIMIENTO",
+    "min": 0,
+    "max": 8,
+    "initial": 0
+  },
+  {
+    "id": "PLURALIDAD",
+    "min": 0,
+    "max": 8,
+    "initial": 0
+  },
+  {
+    "id": "DEUDA",
+    "min": 0,
+    "max": 9,
+    "initial": 0
+  },
+  {
+    "id": "CONFIANZA_VA",
+    "min": -4,
+    "max": 6,
+    "initial": 0
+  },
+  {
+    "id": "ANCLA_2000",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "PACTO_SURA",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "HUELGA_1891",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "MAPA_1542",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "NINO_2140",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "ARCHIVO_ABIERTO",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "TRIBUNAL_2749",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "FUTURO_LIBRE",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "OTRA_ORILLA",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "MEMORIA_MARTA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "VERDAD_JULIAN",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "ECO_VIOLETA",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "FICHA_GABRIEL",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "PLANO_OCULTO",
+    "min": 0,
+    "max": 1,
+    "initial": 0
+  },
+  {
+    "id": "E03_ELECCION",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  },
+  {
+    "id": "PROMESA_E14",
+    "min": 0,
+    "max": 3,
+    "initial": 0
+  }
+]

@@ -1,0 +1,707 @@
+[
+  {
+    "id": "cable_microfono",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 4,
+      "Magia": 2
+    },
+    "price": 0,
+    "weaponType": "cable",
+    "element": "Viento",
+    "allowedActors": [
+      "violeta"
+    ]
+  },
+  {
+    "id": "cable_trenzado",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 9,
+      "Magia": 4
+    },
+    "price": 320,
+    "weaponType": "cable",
+    "element": "Viento",
+    "allowedActors": [
+      "violeta"
+    ]
+  },
+  {
+    "id": "cable_de_cobre",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 15,
+      "Magia": 7
+    },
+    "price": 900,
+    "weaponType": "cable",
+    "element": "Viento",
+    "allowedActors": [
+      "violeta"
+    ]
+  },
+  {
+    "id": "espada_de_utileria",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 5
+    },
+    "price": 0,
+    "weaponType": "espada",
+    "allowedActors": [
+      "angel"
+    ]
+  },
+  {
+    "id": "espada_de_bronce",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 10
+    },
+    "price": 380,
+    "weaponType": "espada",
+    "allowedActors": [
+      "angel"
+    ]
+  },
+  {
+    "id": "sable_de_talam",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 16,
+      "Velocidad": 1
+    },
+    "price": 950,
+    "weaponType": "espada",
+    "allowedActors": [
+      "angel"
+    ]
+  },
+  {
+    "id": "estilo_de_cana",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 4,
+      "Magia": 4
+    },
+    "price": 0,
+    "weaponType": "estilo",
+    "allowedActors": [
+      "sura"
+    ]
+  },
+  {
+    "id": "martillo_tipografico",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 7
+    },
+    "price": 0,
+    "weaponType": "martillo",
+    "allowedActors": [
+      "teo"
+    ]
+  },
+  {
+    "id": "linterna_tactica",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 3,
+      "Magia": 4
+    },
+    "price": 0,
+    "weaponType": "linterna",
+    "element": "Luz",
+    "allowedActors": [
+      "lia"
+    ]
+  },
+  {
+    "id": "bisturi_de_dique",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 5,
+      "Precision": 3
+    },
+    "price": 0,
+    "weaponType": "bisturi",
+    "allowedActors": [
+      "anouk"
+    ]
+  },
+  {
+    "id": "guantelete_pila",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Fuerza": 8
+    },
+    "price": 0,
+    "weaponType": "guantelete",
+    "element": "Metal",
+    "allowedActors": [
+      "imen"
+    ]
+  },
+  {
+    "id": "orbe_coral",
+    "category": "Equipo",
+    "slot": "Arma",
+    "stats": {
+      "Magia": 8
+    },
+    "price": 0,
+    "weaponType": "orbe",
+    "element": "Vacio",
+    "allowedActors": [
+      "anida"
+    ]
+  },
+  {
+    "id": "gorra_de_lana",
+    "category": "Equipo",
+    "slot": "Casco",
+    "stats": {
+      "Defensa": 2
+    },
+    "price": 60
+  },
+  {
+    "id": "vincha_de_tela",
+    "category": "Equipo",
+    "slot": "Casco",
+    "stats": {
+      "Defensa": 1,
+      "Evasion": 2
+    },
+    "price": 70
+  },
+  {
+    "id": "casco_de_bronce",
+    "category": "Equipo",
+    "slot": "Casco",
+    "stats": {
+      "Defensa": 5,
+      "Velocidad": -1
+    },
+    "price": 260
+  },
+  {
+    "id": "visor_de_servicio",
+    "category": "Equipo",
+    "slot": "Casco",
+    "stats": {
+      "Defensa": 3,
+      "Precision": 2
+    },
+    "price": 0
+  },
+  {
+    "id": "chaqueta_escolar",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 3
+    },
+    "price": 50
+  },
+  {
+    "id": "campera_de_taller",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 4
+    },
+    "price": 70
+  },
+  {
+    "id": "tunica_de_lino",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 3,
+      "DefensaMagica": 2
+    },
+    "price": 90
+  },
+  {
+    "id": "delantal_de_imprenta",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 4
+    },
+    "price": 0,
+    "resistances": {
+      "Fuego": 0.5
+    }
+  },
+  {
+    "id": "saco_de_archivo",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 3,
+      "DefensaMagica": 3
+    },
+    "price": 0
+  },
+  {
+    "id": "bata_impermeable",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 4
+    },
+    "price": 0,
+    "resistances": {
+      "Agua": 0.5
+    }
+  },
+  {
+    "id": "traje_de_mantenimiento",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 6,
+      "DefensaMagica": 3
+    },
+    "price": 0,
+    "resistances": {
+      "Rayo": 0.5
+    }
+  },
+  {
+    "id": "manto_de_baja_luz",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 4,
+      "DefensaMagica": 7
+    },
+    "price": 0
+  },
+  {
+    "id": "peto_de_cuero",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 6
+    },
+    "price": 180
+  },
+  {
+    "id": "coraza_de_lino_prensado",
+    "category": "Equipo",
+    "slot": "Peto",
+    "stats": {
+      "Defensa": 8,
+      "DefensaMagica": 2
+    },
+    "price": 420
+  },
+  {
+    "id": "guantes_de_taller",
+    "category": "Equipo",
+    "slot": "Guantes",
+    "stats": {
+      "Defensa": 1,
+      "Fuerza": 1
+    },
+    "price": 40
+  },
+  {
+    "id": "guantes_de_cuero",
+    "category": "Equipo",
+    "slot": "Guantes",
+    "stats": {
+      "Defensa": 2
+    },
+    "price": 80
+  },
+  {
+    "id": "guantes_quirurgicos",
+    "category": "Equipo",
+    "slot": "Guantes",
+    "stats": {
+      "Defensa": 1,
+      "Precision": 3
+    },
+    "price": 0
+  },
+  {
+    "id": "brazales_de_bronce",
+    "category": "Equipo",
+    "slot": "Guantes",
+    "stats": {
+      "Defensa": 4
+    },
+    "price": 240
+  },
+  {
+    "id": "zapatillas_lona",
+    "category": "Equipo",
+    "slot": "Botas",
+    "stats": {
+      "Defensa": 1,
+      "Velocidad": 1
+    },
+    "price": 40
+  },
+  {
+    "id": "sandalias_lira",
+    "category": "Equipo",
+    "slot": "Botas",
+    "stats": {
+      "Defensa": 1,
+      "Evasion": 2
+    },
+    "price": 60
+  },
+  {
+    "id": "zapatos_de_oficina",
+    "category": "Equipo",
+    "slot": "Botas",
+    "stats": {
+      "Defensa": 1,
+      "DefensaMagica": 1
+    },
+    "price": 0
+  },
+  {
+    "id": "botas_de_marino",
+    "category": "Equipo",
+    "slot": "Botas",
+    "stats": {
+      "Defensa": 3
+    },
+    "price": 200
+  },
+  {
+    "id": "pulsera_de_cinta",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "Magia": 4
+    },
+    "price": 150
+  },
+  {
+    "id": "amuleto_de_arcilla",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "DefensaMagica": 5
+    },
+    "price": 200
+  },
+  {
+    "id": "reloj_sin_agujas",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "Velocidad": 4
+    },
+    "price": 600
+  },
+  {
+    "id": "anillo_de_marea",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "MaxMp": 15
+    },
+    "price": 350
+  },
+  {
+    "id": "insignia_de_huelga",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "Fuerza": 5
+    },
+    "price": 400
+  },
+  {
+    "id": "auriculares_aislantes",
+    "category": "Equipo",
+    "slot": "Accesorio",
+    "stats": {
+      "DefensaMagica": 1
+    },
+    "price": 500,
+    "statusImmunities": [
+      "Confusion",
+      "Sueno"
+    ]
+  },
+  {
+    "id": "collar_de_cuero",
+    "category": "Equipo",
+    "slot": "Collar",
+    "stats": {
+      "Fuerza": 3
+    },
+    "price": 80,
+    "allowedActors": [
+      "mascota"
+    ]
+  },
+  {
+    "id": "collar_de_resonancia",
+    "category": "Equipo",
+    "slot": "Collar",
+    "stats": {
+      "Magia": 4,
+      "MaxMp": 5
+    },
+    "price": 260,
+    "allowedActors": [
+      "mascota"
+    ]
+  },
+  {
+    "id": "collar_de_bronce",
+    "category": "Equipo",
+    "slot": "Collar",
+    "stats": {
+      "Fuerza": 6,
+      "Defensa": 2
+    },
+    "price": 420,
+    "allowedActors": [
+      "mascota"
+    ]
+  },
+  {
+    "id": "manta_acolchada",
+    "category": "Equipo",
+    "slot": "ArmaduraMascota",
+    "stats": {
+      "Defensa": 3,
+      "MaxHp": 15
+    },
+    "price": 90,
+    "allowedActors": [
+      "mascota"
+    ]
+  },
+  {
+    "id": "malla_ligera",
+    "category": "Equipo",
+    "slot": "ArmaduraMascota",
+    "stats": {
+      "Defensa": 6,
+      "Velocidad": -1
+    },
+    "price": 300,
+    "allowedActors": [
+      "mascota"
+    ]
+  },
+  {
+    "id": "venda",
+    "category": "Consumible",
+    "price": 20,
+    "effect": {
+      "healHp": 60
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "botiquin",
+    "category": "Consumible",
+    "price": 90,
+    "effect": {
+      "healHp": 200
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "agua_manantial",
+    "category": "Consumible",
+    "price": 40,
+    "effect": {
+      "healMp": 15
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "te_de_hierbas",
+    "category": "Consumible",
+    "price": 120,
+    "effect": {
+      "healMp": 40
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "sales_de_olor",
+    "category": "Consumible",
+    "price": 150,
+    "effect": {
+      "revive": 0.25
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "antidoto",
+    "category": "Consumible",
+    "price": 15,
+    "effect": {
+      "cureStatuses": [
+        "Veneno"
+      ]
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "colirio",
+    "category": "Consumible",
+    "price": 15,
+    "effect": {
+      "cureStatuses": [
+        "Ceguera"
+      ]
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "campanilla",
+    "category": "Consumible",
+    "price": 25,
+    "effect": {
+      "cureStatuses": [
+        "Sueno",
+        "Confusion"
+      ]
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "recuerdo_embotellado",
+    "category": "Consumible",
+    "price": 60,
+    "effect": {
+      "cureStatuses": [
+        "Olvido",
+        "Silencio"
+      ]
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "caramelo_de_miel",
+    "category": "Consumible",
+    "price": 70,
+    "effect": {
+      "healHp": 30,
+      "allAllies": true
+    },
+    "usableInBattle": true,
+    "usableInField": true
+  },
+  {
+    "id": "bizcocho",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 10
+  },
+  {
+    "id": "pan_de_lira",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 12
+  },
+  {
+    "id": "pescado_seco",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 12
+  },
+  {
+    "id": "carbon_dulce",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 15
+  },
+  {
+    "id": "tuerca_brillante",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 15
+  },
+  {
+    "id": "flor_de_estuario",
+    "category": "Ofrenda",
+    "bondingBonus": 0.05,
+    "price": 18
+  },
+  {
+    "id": "nectar_coral",
+    "category": "Ofrenda",
+    "bondingBonus": 0.08,
+    "price": 40
+  },
+  {
+    "id": "fragmento_de_eco",
+    "category": "Clave",
+    "price": 0
+  },
+  {
+    "id": "escama_de_marea",
+    "category": "Clave",
+    "price": 0
+  },
+  {
+    "id": "ascua_eterna",
+    "category": "Clave",
+    "price": 0
+  },
+  {
+    "id": "engranaje_maestro",
+    "category": "Clave",
+    "price": 0
+  },
+  {
+    "id": "coral_de_baja_luz",
+    "category": "Clave",
+    "price": 0
+  },
+  {
+    "id": "cinta_2026",
+    "category": "Clave"
+  },
+  {
+    "id": "llave_de_marta",
+    "category": "Clave"
+  },
+  {
+    "id": "ficha_gabriel",
+    "category": "Clave"
+  },
+  {
+    "id": "diapason_de_arcilla",
+    "category": "Clave"
+  }
+]

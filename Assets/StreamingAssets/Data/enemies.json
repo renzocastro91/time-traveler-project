@@ -1,0 +1,430 @@
+[
+  {
+    "id": "hueco_menor",
+    "level": 2,
+    "element": "Vacio",
+    "stats": {
+      "MaxHp": 38,
+      "MaxMp": 10,
+      "Fuerza": 8,
+      "Magia": 6,
+      "Defensa": 4,
+      "DefensaMagica": 4,
+      "Velocidad": 9,
+      "Precision": 8,
+      "Evasion": 5,
+      "Suerte": 2
+    },
+    "actions": [
+      {
+        "weight": 3
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_vaciar"
+      }
+    ],
+    "xp": 14,
+    "money": 8,
+    "drops": [
+      {
+        "itemId": "venda",
+        "chance": 0.2
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "hueco"
+  },
+  {
+    "id": "hueco_ecoico",
+    "level": 3,
+    "element": "Viento",
+    "stats": {
+      "MaxHp": 46,
+      "MaxMp": 16,
+      "Fuerza": 7,
+      "Magia": 9,
+      "Defensa": 4,
+      "DefensaMagica": 6,
+      "Velocidad": 11,
+      "Precision": 8,
+      "Evasion": 7,
+      "Suerte": 2
+    },
+    "actions": [
+      {
+        "weight": 2
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_grito_hueco"
+      }
+    ],
+    "xp": 18,
+    "money": 10,
+    "drops": [
+      {
+        "itemId": "agua_manantial",
+        "chance": 0.2
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "hueco"
+  },
+  {
+    "id": "anguila_de_galeria",
+    "level": 3,
+    "element": "Agua",
+    "stats": {
+      "MaxHp": 52,
+      "MaxMp": 12,
+      "Fuerza": 10,
+      "Magia": 7,
+      "Defensa": 5,
+      "DefensaMagica": 5,
+      "Velocidad": 10,
+      "Precision": 9,
+      "Evasion": 6,
+      "Suerte": 3
+    },
+    "actions": [
+      {
+        "weight": 2,
+        "techniqueId": "e_mordida_anguila"
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_descarga_anguila"
+      }
+    ],
+    "xp": 20,
+    "money": 12,
+    "drops": [
+      {
+        "itemId": "pescado_seco",
+        "chance": 0.3
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "eel"
+  },
+  {
+    "id": "boss_hueco",
+    "level": 5,
+    "element": "Vacio",
+    "stats": {
+      "MaxHp": 620,
+      "MaxMp": 60,
+      "Fuerza": 11,
+      "Magia": 11,
+      "Defensa": 6,
+      "DefensaMagica": 6,
+      "Velocidad": 8,
+      "Precision": 10,
+      "Evasion": 2,
+      "Suerte": 4
+    },
+    "actions": [
+      {
+        "weight": 2
+      },
+      {
+        "weight": 2,
+        "techniqueId": "e_vaciar"
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_grito_hueco",
+        "maxHpPercent": 0.6
+      }
+    ],
+    "xp": 150,
+    "money": 120,
+    "drops": [
+      {
+        "itemId": "sales_de_olor",
+        "chance": 1.0
+      }
+    ],
+    "isBoss": true,
+    "statusImmunities": [
+      "Sueno",
+      "Confusion",
+      "Olvido"
+    ],
+    "modelHint": "boss_hueco"
+  },
+  {
+    "id": "dron_de_vigilancia",
+    "level": 5,
+    "element": "Rayo",
+    "stats": {
+      "MaxHp": 60,
+      "MaxMp": 20,
+      "Fuerza": 9,
+      "Magia": 11,
+      "Defensa": 6,
+      "DefensaMagica": 8,
+      "Velocidad": 14,
+      "Precision": 10,
+      "Evasion": 12,
+      "Suerte": 3
+    },
+    "actions": [
+      {
+        "weight": 1,
+        "techniqueId": "e_escaneo"
+      },
+      {
+        "weight": 2,
+        "techniqueId": "e_rayo_dron"
+      }
+    ],
+    "xp": 26,
+    "money": 15,
+    "drops": [
+      {
+        "itemId": "tuerca_brillante",
+        "chance": 0.35
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [
+      "Veneno"
+    ],
+    "modelHint": "drone"
+  },
+  {
+    "id": "recolector_de_identidad",
+    "level": 6,
+    "element": "Luz",
+    "stats": {
+      "MaxHp": 80,
+      "MaxMp": 15,
+      "Fuerza": 11,
+      "Magia": 9,
+      "Defensa": 8,
+      "DefensaMagica": 7,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 7,
+      "Suerte": 4
+    },
+    "actions": [
+      {
+        "weight": 2
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_citacion"
+      }
+    ],
+    "xp": 30,
+    "money": 25,
+    "drops": [
+      {
+        "itemId": "venda",
+        "chance": 0.3
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "humanoid"
+  },
+  {
+    "id": "guardia_automatizada",
+    "level": 7,
+    "element": "Metal",
+    "stats": {
+      "MaxHp": 110,
+      "MaxMp": 20,
+      "Fuerza": 14,
+      "Magia": 6,
+      "Defensa": 12,
+      "DefensaMagica": 5,
+      "Velocidad": 7,
+      "Precision": 10,
+      "Evasion": 3,
+      "Suerte": 2
+    },
+    "actions": [
+      {
+        "weight": 3
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_reparar"
+      }
+    ],
+    "xp": 38,
+    "money": 30,
+    "drops": [
+      {
+        "itemId": "tuerca_brillante",
+        "chance": 0.4
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [
+      "Veneno",
+      "Sueno"
+    ],
+    "modelHint": "robot"
+  },
+  {
+    "id": "boss_fe_de_erratas",
+    "level": 9,
+    "element": "Metal",
+    "stats": {
+      "MaxHp": 900,
+      "MaxMp": 80,
+      "Fuerza": 14,
+      "Magia": 15,
+      "Defensa": 10,
+      "DefensaMagica": 12,
+      "Velocidad": 9,
+      "Precision": 12,
+      "Evasion": 4,
+      "Suerte": 5
+    },
+    "actions": [
+      {
+        "weight": 2
+      },
+      {
+        "weight": 2,
+        "techniqueId": "e_corregir_registro"
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_sello_legal",
+        "maxHpPercent": 0.6
+      }
+    ],
+    "xp": 300,
+    "money": 250,
+    "drops": [
+      {
+        "itemId": "anillo_de_marea",
+        "chance": 1.0
+      }
+    ],
+    "isBoss": true,
+    "statusImmunities": [
+      "Sueno",
+      "Confusion",
+      "Olvido",
+      "Veneno"
+    ],
+    "modelHint": "boss_erratas"
+  },
+  {
+    "id": "nombre_sellado",
+    "level": 9,
+    "element": "Tierra",
+    "stats": {
+      "MaxHp": 120,
+      "MaxMp": 14,
+      "Fuerza": 16,
+      "Magia": 8,
+      "Defensa": 13,
+      "DefensaMagica": 7,
+      "Velocidad": 9,
+      "Precision": 11,
+      "Evasion": 5,
+      "Suerte": 3
+    },
+    "actions": [
+      {
+        "weight": 2,
+        "techniqueId": "e_lanza"
+      },
+      {
+        "weight": 1,
+        "techniqueId": "e_censo"
+      }
+    ],
+    "xp": 45,
+    "money": 30,
+    "drops": [
+      {
+        "itemId": "pan_de_lira",
+        "chance": 0.4
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "soldier"
+  },
+  {
+    "id": "escriba_del_magistrado",
+    "level": 8,
+    "element": "Tierra",
+    "stats": {
+      "MaxHp": 85,
+      "MaxMp": 24,
+      "Fuerza": 8,
+      "Magia": 14,
+      "Defensa": 7,
+      "DefensaMagica": 11,
+      "Velocidad": 10,
+      "Precision": 10,
+      "Evasion": 6,
+      "Suerte": 4
+    },
+    "actions": [
+      {
+        "weight": 1
+      },
+      {
+        "weight": 2,
+        "techniqueId": "e_censo"
+      }
+    ],
+    "xp": 40,
+    "money": 35,
+    "drops": [
+      {
+        "itemId": "amuleto_de_arcilla",
+        "chance": 0.05
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "humanoid"
+  },
+  {
+    "id": "jabali_del_olivar",
+    "level": 8,
+    "element": "Tierra",
+    "stats": {
+      "MaxHp": 130,
+      "Fuerza": 17,
+      "Defensa": 10,
+      "DefensaMagica": 4,
+      "Velocidad": 9,
+      "Precision": 9,
+      "Evasion": 4,
+      "Suerte": 3
+    },
+    "actions": [
+      {
+        "weight": 1
+      }
+    ],
+    "xp": 42,
+    "money": 10,
+    "drops": [
+      {
+        "itemId": "pan_de_lira",
+        "chance": 0.2
+      }
+    ],
+    "isBoss": false,
+    "statusImmunities": [],
+    "modelHint": "boar"
+  }
+]

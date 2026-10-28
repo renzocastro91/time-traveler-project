@@ -1,0 +1,132 @@
+[
+  {
+    "id": "enc_estacion_huecos",
+    "enemies": [
+      {
+        "enemyId": "hueco_menor",
+        "x": -1.8,
+        "y": 3.2
+      },
+      {
+        "enemyId": "hueco_menor",
+        "x": 1.8,
+        "y": 3.2
+      }
+    ],
+    "canFlee": true
+  },
+  {
+    "id": "enc_estacion_mixto",
+    "enemies": [
+      {
+        "enemyId": "anguila_de_galeria",
+        "x": -1.5,
+        "y": 3.0
+      },
+      {
+        "enemyId": "hueco_ecoico",
+        "x": 1.5,
+        "y": 3.6
+      }
+    ],
+    "canFlee": true
+  },
+  {
+    "id": "enc_boss_hueco",
+    "enemies": [
+      {
+        "enemyId": "boss_hueco",
+        "x": 0,
+        "y": 3.8
+      }
+    ],
+    "canFlee": false,
+    "dramaticRule": "hueco"
+  },
+  {
+    "id": "enc_2026_drones",
+    "enemies": [
+      {
+        "enemyId": "dron_de_vigilancia",
+        "x": -2.0,
+        "y": 3.0
+      },
+      {
+        "enemyId": "dron_de_vigilancia",
+        "x": 2.0,
+        "y": 3.0
+      },
+      {
+        "enemyId": "recolector_de_identidad",
+        "x": 0,
+        "y": 4.0
+      }
+    ],
+    "canFlee": true
+  },
+  {
+    "id": "enc_2026_archivo",
+    "enemies": [
+      {
+        "enemyId": "guardia_automatizada",
+        "x": -1.5,
+        "y": 3.4
+      },
+      {
+        "enemyId": "dron_de_vigilancia",
+        "x": 1.8,
+        "y": 3.0
+      }
+    ],
+    "canFlee": true
+  },
+  {
+    "id": "enc_boss_erratas",
+    "enemies": [
+      {
+        "enemyId": "boss_fe_de_erratas",
+        "x": 0,
+        "y": 4.2
+      },
+      {
+        "enemyId": "guardia_automatizada",
+        "x": -3.0,
+        "y": 3.0
+      }
+    ],
+    "canFlee": false,
+    "dramaticRule": "fe_de_erratas"
+  },
+  {
+    "id": "enc_lira_sellados",
+    "enemies": [
+      {
+        "enemyId": "nombre_sellado",
+        "x": -1.8,
+        "y": 3.2
+      },
+      {
+        "enemyId": "nombre_sellado",
+        "x": 1.8,
+        "y": 3.2
+      },
+      {
+        "enemyId": "escriba_del_magistrado",
+        "x": 0,
+        "y": 4.4
+      }
+    ],
+    "canFlee": true
+  },
+  {
+    "id": "enc_lira_jabali",
+    "enemies": [
+      {
+        "enemyId": "jabali_del_olivar",
+        "x": 0,
+        "y": 3.4
+      }
+    ],
+    "canFlee": true
+  }
+]

@@ -1,0 +1,43 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/Assets/Plugins/Editor/JetBrains*
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+crashlytics-build.properties
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+!tests/**/*.csproj
+*.sln
+!TimeTraveler.Tests.sln
+*.suo
+*.user
+*.userprefs
+*.DotSettings.user
+
+# Pruebas .NET fuera de Unity
+tests/**/bin/
+tests/**/obj/
+TestResults/
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
